@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Out Page 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/020a23cc78.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Raleway", sans-serif;
+    }
+
+
+    /* HERO SECTION */
+
+    #header {
+      height: 20vh;
+    }
+
+    #nav_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      z-index: 1000;
+    }
+
+    #nav_bar ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav_bar ul li {
+      list-style: none;
+    }
+
+    #nav_bar ul li a {
+      color: #1D1213;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    #nav_bar ul li a:hover {
+      color: #F06D82;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+
+
+    /* CHECKOUT DETAILS */
+
+
+    .checkout {
+      padding: 20px 60px;
+
+    }
+
+    .checkout p {
+      font-size: 46px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .checkout p span {
+      font-size: 46px;
+      font-weight: 600;
+      color: #9A949466;
+    }
+
+    /* SECTION 1 */
+
+    .sec1 {
+      padding: 20px 90px;
+    }
+
+    .sec1-a {
+      padding: 10px;
+      border: 1px solid #1D1213;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .texts {
+      padding: 15px 0px;
+      width: 30%;
+    }
+
+    .text-image {
+      display: flex;
+      gap: 5px;
+      line-height: 1.4;
+    }
+
+    .text-image img {
+      width: 150px;
+    }
+
+    .text1 h2 {
+      font-size: 40px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .text1 h2 span {
+      font-size: 24px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .text1 h4 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .text1 p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .text2 {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #1D1213;
+    }
+
+
+    .text3 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .text2 p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .text3 p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+
+    .cart {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cart img {
+      width: 15%;
+    }
+
+    .cart p {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .cart p a {
+      text-decoration: none;
+    }
+
+
+    /* SECTION 2 */
+
+
+    .sec2 {
+      padding: 20px 90px;
+    }
+
+    .sec2-a {
+      padding: 10px;
+      border: 1px solid #1D1213;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .text-image img {
+      width: 150px;
+    }
+
+
+    .texts {
+      padding: 15px 0px;
+      width: 30%;
+    }
+
+    .text-image {
+      display: flex;
+      gap: 5px;
+      line-height: 1.4;
+    }
+
+    .text1 h2 {
+      font-size: 40px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .text1 h2 span {
+      font-size: 24px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .text1 h4 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .text1 p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .text2 {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #1D1213;
+    }
+
+
+    .text3 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .text2 p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .text3 p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .text4 {
+      padding: 10px 90px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .text4 p {
+      font-size: 30px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+
+    .cart {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cart img {
+      width: 15%;
+    }
+
+    .cart p {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .cart p a {
+      text-decoration: none;
+    }
+
+    #button {
+      display: flex;
+      padding: 30px 90px;
+      justify-content: space-between;
+
+    }
+
+    .btn1 {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px 50px;
+      border: 2px solid #F06D82;
+    }
+
+    .btn1 a {
+      text-decoration: none;
+      color: #1D1213;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+
+    .btn2 {
+      background-color: #F06D82;
+      border-radius: 15px;
+      padding: 20px 50px;
+      border: none;
+    }
+
+    .btn2 a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+
+    /* AVAILABLE BOOKS */
+    #section5 {
+      padding: 50px 60px;
+    }
+
+    #section5 h2 {
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 20px;
+      font-size: 34px;
+      font-weight: 500;
+    }
+
+    .books {
+      display: flex;
+      gap: 10px;
+      overflow-x: scroll;
+    }
+
+    .books::-webkit-scrollbar {
+      display: none;
+    }
+
+    #book {
+      padding: 0px 20px;
+    }
+
+    .book-image img {
+      width: 150px;
+      height: 250px;
+      margin: 0px 30px;
+    }
+
+    #book h4 {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      background-color: #1D1213;
+    }
+
+    .footer-text {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.5;
+      padding: 30px 260px;
+    }
+
+    .side1 h3 {
+      text-align: start;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      text-align: start;
+
+    }
+
+    .side1 ul li {
+      list-style: none;
+      justify-content: space-between;
+    }
+
+    .side1 a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .side1 img {
+      width: 45%;
+    }
+
+    .foot {
+      padding: 20px 220px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .foot p {
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+    }
+
+    .foot img {
+      width: 9%;
+    }
+
+    /* ---RWD */
+
+    @media screen and (max-width:480px) {
+
+      #header {
+        height: 20vh;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+
+      .checkout {
+        padding: 30px 10px;
+      }
+
+      .checkout p {
+        font-size: 16px;
+        font-weight: 650;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+      .sec1 {
+        padding: 20px 50px;
+      }
+
+      .sec1-a {
+        padding: 10px;
+        border: 1px solid #1D1213;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .texts {
+        padding: 15px 0px;
+        width: 100%;
+      }
+
+      .text-image img {
+        width: 40px;
+        height: 70px;
+      }
+
+      .text-image {
+        display: flex;
+        gap: 5px;
+        line-height: 1.4;
+      }
+
+      .text1 h2 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text1 h2 span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text1 h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text1 p {
+        font-size: 12px;
+        font-weight: 550;
+        color: #1D1213;
+      }
+
+      .cart {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .cart img {
+        width: 30px;
+        height: 25px;
+      }
+
+      .cart p {
+        font-size: 10px;
+        font-weight: 400;
+      }
+
+      .cart p a {
+        text-decoration: none;
+      }
+
+      .text2 {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        border-bottom: 2px solid #1D1213;
+      }
+
+
+      .text3 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+      .text2 p {
+        font-size: 12px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text3 p {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .sec2 {
+        padding: 20px 50px;
+      }
+
+      .sec2-a {
+        padding: 10px;
+        border: 1px solid #1D1213;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .text4 {
+        padding: 10px 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      .text4 p {
+        font-size: 13px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      #button {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 30px 40px;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .btn1 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: 2px solid #F06D82;
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: #1D1213;
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+
+      .btn2 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: none;
+      }
+
+      .btn2 a {
+        text-decoration: none;
+        color: white;
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+      #section5 {
+        padding: 30px 10px;
+      }
+
+      #section5 h2 {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .books {
+        display: flex;
+        gap: 0px;
+        overflow-x: scroll;
+      }
+
+      #book {
+        padding: 0px 10px;
+      }
+
+      .book-image img {
+        width: 100px;
+        height: 180px;
+        margin: 0px 10px;
+      }
+
+      #book h4 {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 10px;
+        line-height: 1.5;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+
+    }
+
+    @media (min-width:481px) and (max-width:768px) {
+
+      #header {
+        height: 20vh;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 15px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .checkout {
+        padding: 30px 10px;
+      }
+
+      .checkout p {
+        font-size: 20px;
+        font-weight: 650;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+      .sec1 {
+        padding: 20px 70px;
+      }
+
+      .sec1-a {
+        padding: 10px;
+        border: 1px solid #1D1213;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+      }
+
+      .texts {
+        padding: 15px 0px;
+      }
+
+      .text-image img {
+        width: 55px;
+        height: 90px;
+      }
+
+      .text-image {
+        display: flex;
+        gap: 5px;
+        line-height: 1.4;
+      }
+
+      .text1 h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text1 h2 span {
+        font-size: 10px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text1 h4 {
+        font-size: 13px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text1 p {
+        font-size: 11px;
+        font-weight: 550;
+        color: #1D1213;
+      }
+
+      .cart {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .cart img {
+        width: 30px;
+        height: 25px;
+      }
+
+      .cart p {
+        font-size: 10px;
+        font-weight: 400;
+      }
+
+      .cart p a {
+        text-decoration: none;
+      }
+
+      .text2 {
+        display: flex;
+        gap: 10px;
+        border-bottom: 2px solid #1D1213;
+      }
+
+
+      .text3 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+      .text2 p {
+        font-size: 11px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text3 p {
+        font-size: 11px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .sec2 {
+        padding: 20px 70px;
+      }
+
+      .sec2-a {
+        padding: 10px;
+        border: 1px solid #1D1213;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .text4 {
+        padding: 10px 75px;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      .text4 p {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      #button {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 30px 75px;
+        width: 100%;
+      }
+
+      .btn1 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px 15px;
+        border: 2px solid #F06D82;
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: #1D1213;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+
+      .btn2 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 10px 15px;
+        border: none;
+      }
+
+      .btn2 a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      #section5 {
+        padding: 30px 30px;
+      }
+
+      #section5 h2 {
+        font-size: 26px;
+        font-weight: 500;
+      }
+
+
+      .books {
+        display: flex;
+        gap: 0px;
+        overflow-x: scroll;
+      }
+
+      #book {
+        padding: 0px 10px;
+      }
+
+      .book-image img {
+        width: 100px;
+        height: 180px;
+        margin: 0px 10px;
+      }
+
+      #book h4 {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 10px;
+        line-height: 1.5;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+
+    }
+
+     @media (min-width:769px) and (max-width:998px) {
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+
+      #nav_bar ul li a:hover {
+        color: #F06D82;
+      }
+
+    }
+    
+
+    @media (min-width:769px) and (max-width:1279px) {
+
+      #header {
+        height: 20vh;
+      }
+
+
+      .checkout {
+        padding: 30px 50px;
+      }
+
+      .checkout p {
+        font-size: 32px;
+        font-weight: 600;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+
+      .sec1 {
+        padding: 20px 80px;
+      }
+
+      .sec1-a {
+        padding: 20px;
+        border: 1px solid #1D1213;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .texts {
+        padding: 20px 0px;
+      }
+
+
+      .text-image {
+        display: flex;
+        gap: 5px;
+        line-height: 1.4;
+      }
+
+      .text-image img {
+        width: 100px;
+      }
+
+      .text1 h2 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text1 h2 span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text1 h4 {
+        font-size: 12px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text1 p {
+        font-size: 10px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text2 {
+        display: flex;
+        gap: 20px;
+      }
+
+
+      .text3 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .text2 p {
+        font-size: 10px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text3 p {
+        font-size: 12px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+
+      .cart {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .cart img {
+        width: 30px;
+        height: 25px;
+      }
+
+      .cart p {
+        font-size: 10px;
+        font-weight: 400;
+      }
+
+      .cart p a {
+        text-decoration: none;
+      }
+
+
+      .sec2 {
+        padding: 20px 80px;
+      }
+
+      .sec2-a {
+        padding: 20px;
+        border: 1px solid #1D1213;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .texts {
+        padding: 20px 0px;
+        width: 30%;
+      }
+
+      .text-image {
+        display: flex;
+        gap: 5px;
+        line-height: 1.4;
+      }
+
+      .text1 h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text1 h2 span {
+        font-size: 18px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text1 h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text1 p {
+        font-size: 15px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text2 {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #1D1213;
+      }
+
+      .text3 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .text2 p {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .text3 p {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .text4 {
+        padding: 10px 90px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .text4 p {
+        font-size: 26px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .cart {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .cart img {
+        width: 15%;
+      }
+
+      .cart p {
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      .cart p a {
+        text-decoration: none;
+      }
+
+      #button {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 30px 90px;
+      }
+
+      .btn1 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px 15px;
+        border: 2px solid #F06D82;
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: #1D1213;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+
+      .btn2 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 10px 15px;
+        border: none;
+      }
+
+      .btn2 a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      #section5 {
+        padding: 30px 50px;
+      }
+
+      #section5 h2 {
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+
+      .books {
+        display: flex;
+        gap: 0px;
+        overflow-x: scroll;
+      }
+
+      #book {
+        padding: 0px 10px;
+      }
+
+      .book-image img {
+        width: 100px;
+        height: 180px;
+        margin: 0px 10px;
+      }
+
+      #book h4 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 100px;
+        line-height: 1.5;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ----------HERO SECTION -->
+
+  <header id="header">
+
+    <nav id="nav_bar" class="navbar navbar-expand-lg">
+      <div>
+        <img src="images/logo-black.png" alt="">
+        <img src="images/Frame 36013.png" width="37px">
+      </div>
+      <div>
+        <button class="navbar-toggler" style="background-color: #F06D82;" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon menu-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Bookstores</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Help</a></li>
+            <li class="nav-item"><a href="" class="nav-link"><img src="images/love-black.png"></a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <img src="images/material-symbols_shopping-cart-black.png">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <img src="images/mdi_account-blak.png">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ----------------CHECKOUT DETAILS -->
+
+  <div class="section1">
+    <div class="checkout">
+      <p>Shopping Cart <i class="fa-solid fa-chevron-right fa-xs" style="color: #1D1213;"></i> <span>
+          Checkout Details <i class="fa-solid fa-chevron-right fa-xs" style="color: #9A949466;"></i>
+          Order Complete </span></p>
+    </div>
+  </div>
+  <!-- SECTION1 -->
+  <div class="sec1">
+    <div class="sec1-a">
+
+      <div class="text-image">
+        <div>
+          <img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png">
+        </div>
+        <div class="text1">
+          <h2>Real Americans<span>(Hardcover)</span></h2>
+          <h4>By Rachel Khong</h4>
+          <p>Genre: Fiction</p>
+
+          <div class="cart">
+            <img src="images/Frame 612.png">
+            <p><a href="" style="color: #FF0000;">Delete</a></p>
+            <p><a href="" style="color: #1877F2;">Save for later</a></p>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="texts">
+        <div class="text2">
+
+          <div>
+            <p>Price</p>
+            <p>Delivery fee:</p>
+          </div>
+
+          <div>
+            <p>NGN10, 183</p>
+            <p>NGN4,000</p>
+          </div>
+        </div>
+        <div class="text3">
+          <div>
+            <p>Subtotal:</p>
+          </div>
+          <div>
+            <p>NGN14, 183</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- SECTION 2 -->
+
+  <div class="sec2">
+    <div class="sec2-a">
+
+      <div class="text-image">
+        <div>
+          <img src="images/63f33e9cf2c7c17761164099a361727f2d6c141a.jpg">
+        </div>
+        <div class="text1">
+          <h2>Atomic habits<span>(Paperback)</span></h2>
+          <h4>By James Clear</h4>
+          <p>Genre: Fiction</p>
+
+          <div class="cart">
+            <img src="images/Frame 612.png">
+            <p><a href="" style="color: #FF0000;">Delete</a></p>
+            <p><a href="" style="color: #1877F2;">Save for later</a></p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="texts">
+        <div class="text2">
+
+          <div>
+            <p>Price</p>
+            <p>Delivery fee:</p>
+          </div>
+
+          <div>
+            <p>NGN3, 700</p>
+            <p>NGN4,000</p>
+          </div>
+        </div>
+        <div class="text3">
+          <div>
+            <p>Subtotal:</p>
+          </div>
+          <div>
+            <p>NGN7, 700</p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="text4">
+    <div>
+      <p>Total (2 Items):</p>
+    </div>
+    <div>
+      <p>NGN21, 883</p>
+    </div>
+  </div>
+
+  <div id="button">
+    <button class="btn1"><a href="">Continue Shopping</a></button>
+    <button class="btn2"><a href="">Proceed To Checkout</a></button>
+  </div>
+
+  </div>
+
+
+  <!-- -------------------AVAILABLE BOOKS -->
+  <div id="section5">
+    <h2>
+      Customers who bought this item also bought</h2>
+
+
+    <div class="books">
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/rich-dad.png" alt="">
+        </div>
+        <h4>Rich Dad, Poor Dad</h4>
+      </div>
+
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/habit.png" alt="">
+        </div>
+        <h4>NThe power Of Habits</h4>
+      </div>
+
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/king.png" alt="">
+        </div>
+        <h4>How To Talk To Anyone,
+          Anytime, Anywhere</h4>
+      </div>
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/5am club.png" alt="">
+        </div>
+        <h4>The 5 AM Club</h4>
+      </div>
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/love study.png" alt="">
+        </div>
+        <h4>How To End A
+          Love Story</h4>
+      </div>
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/bite.png" alt="">
+        </div>
+        <h4>Bite by bite</h4>
+      </div>
+
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/arm reach.png" alt="">
+        </div>
+        <h4>Within Arms Reach</h4>
+      </div>
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/last-secret-agent.png" alt="">
+        </div>
+        <h4>Last Secret Agent</h4>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- -------FOOTER -->
+
+  <div class="footer">
+    <div class="logo" style="background-color: #1D1213;">
+      <img src="images/footer.png" width="100%">
+    </div>
+
+
+
+    <div class="footer-text">
+
+      <div class="side1">
+        <h3>Library</h3>
+        <ul>
+          <li><a href="">Genres</a></li>
+          <li><a href="">Languages</a></li>
+          <li><a href="">Authors</a></li>
+        </ul>
+      </div>
+
+
+      <div class="side1">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Help</a></li>
+          <li><a href="">Become A Partner</a></li>
+        </ul>
+      </div>
+
+      <div class="side1">
+        <h3 style="text-align: center;">Get the app</h3>
+        <a href=""><img src="images/googleplay.png" style="margin-right: 20px;"></a>
+        <a href=""><img src="images/applestore.png" alt=""></a>
+      </div>
+    </div>
+
+    <div style="border: 1px solid white;"></div>
+
+    <div class="foot">
+      <P>Contact Us: <img src="images/logos_facebook.png">
+        <img src="images/skill-icons_instagram.png">
+        <img src="images/prime_twitter.png">
+        <img src="images/logos_tiktok-icon.png">
+      </P>
+
+      <p>Terms and Privacy</p>
+      <p>Delivery & Returns</p>
+
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

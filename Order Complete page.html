@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COrder Complete Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/020a23cc78.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Raleway", sans-serif;
+    }
+
+
+    /* HERO SECTION */
+
+    #header {
+      height: 20vh;
+    }
+
+    #nav_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      z-index: 1000;
+    }
+
+    #nav_bar ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav_bar ul li {
+      list-style: none;
+    }
+
+    #nav_bar ul li a {
+      color: #1D1213;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    #nav_bar ul li a:hover {
+      color: #F06D82;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+
+
+
+    /* CHECKOUT DETAILS */
+
+
+    .checkout {
+      padding: 10px 120px;
+
+    }
+
+    .checkout p {
+      font-size: 36px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .checkout p span {
+      font-size: 36px;
+      font-weight: 600;
+      color: #9A949466;
+    }
+
+
+    /* COMPLETE ORDER */
+
+    .complete-order {
+      padding: 15px 100px;
+    }
+
+    .order {
+      display: flex;
+      align-items: center;
+      padding: 20px 0px;
+    }
+
+    .order img {
+      width: 6%;
+    }
+
+    .order h4 {
+      font-size: 24px;
+      font-weight: 600;
+      padding: 0px 5px;
+    }
+
+    .order p {
+      font-size: 20px;
+      font-weight: 400;
+      padding: 0px 5px;
+    }
+
+    .update {
+      padding: 5px;
+      border: 1px solid #1D1213;
+      margin-bottom: 20px;
+      width: 415px;
+    }
+
+    .update h4 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .update p {
+      font-size: 16px;
+      font-weight: 400;
+      padding: 8px 5px;
+    }
+
+    .contact {
+      border: 1px solid #1D1213;
+      width: 700px;
+    }
+
+    .contact h6 {
+      padding: 7px;
+      font-size: 20px;
+      font-weight: 400;
+      border-bottom: 1px solid #1D1213;
+
+    }
+
+    .contact p {
+      font-size: 20px;
+      font-weight: 400;
+      padding: 7px;
+    }
+
+    .contact h5 {
+      font-size: 20px;
+      font-weight: 400;
+      border-top: 1px solid #1D1213;
+      padding: 7px;
+    }
+
+    .your-order span {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .your-order {
+      text-align: center;
+    }
+
+    #order-a {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    #order-a img {
+      width: 120px;
+    }
+
+    #order-a h2 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    #order-a h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    #order-a span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .price p {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .sub-total {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sub-total p {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+
+    }
+
+    .complete-order {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #1D1213;
+      padding-top: 10px;
+
+
+    }
+
+    .total p {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    #buttons {
+      padding: 30px;
+      text-align: center;
+
+    }
+
+    .btn2 {
+      background-color: white;
+      border-radius: 20px;
+      padding: 12px 50px;
+      border: 2px solid #F06D82;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .btn2:hover {
+      background-color: #F06D82;
+      color: white;
+    }
+
+    .btn2 a:hover {
+      color: white;
+    }
+
+    .btn2 a {
+      text-decoration: none;
+      color: #1D1213;
+
+    }
+
+    /* ---RWD */
+
+    @media screen and (max-width:480px) {
+
+      #header {
+        height: 20vh;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .checkout {
+        padding: 10px 10px;
+      }
+
+      .checkout p {
+        font-size: 18px;
+        font-weight: 650;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+      .complete-order {
+        padding: 15px 50px;
+      }
+
+      .order {
+        display: flex;
+        align-items: center;
+        padding: 20px 0px;
+      }
+
+      .order img {
+        width: 15%;
+      }
+
+      .order h4 {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0px 5px;
+      }
+
+      .order p {
+        font-size: 15px;
+        font-weight: 400;
+        padding: 0px 5px;
+      }
+
+      .update {
+        padding: 10px;
+        border: 1px solid #1D1213;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .update h4 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .update p {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 8px 5px;
+      }
+
+      .contact {
+        border: 1px solid #1D1213;
+        width: 100%;
+      }
+
+      .contact h6 {
+        padding: 7px;
+        font-size: 18px;
+        font-weight: 500;
+        border-bottom: 1px solid #1D1213;
+
+      }
+
+      .contact p {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 5px;
+      }
+
+      .contact h5 {
+        font-size: 18px;
+        font-weight: 500;
+        border-top: 1px solid #1D1213;
+        padding: 7px;
+      }
+
+      .your-order span {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .your-order {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+
+      #order-a {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      #order-a img {
+        width: 50px;
+      }
+
+      #order-a h2 {
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      #order-a h3 {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      #order-a span {
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .price {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .price p {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .sub-total {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      .sub-total p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+
+      }
+
+      .complete-order {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .total {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #1D1213;
+        padding-top: 10px;
+
+      }
+
+      .total p {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      #buttons {
+        padding: 15px;
+        text-align: center;
+
+      }
+
+      .btn2 {
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        border: 2px solid #F06D82;
+        font-size: 10px;
+        font-weight: 600;
+      }
+
+    }
+
+    @media (min-width:481px) and (max-width:768px) {
+
+      #header {
+        height: 20vh;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 15px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .checkout {
+        padding: 30px 10px;
+      }
+
+      .checkout p {
+        font-size: 22px;
+        font-weight: 650;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+      .complete-order {
+        padding: 15px 90px;
+      }
+
+      .order {
+        display: flex;
+        align-items: center;
+        padding: 20px 0px;
+      }
+
+      .order img {
+        width: 15%;
+      }
+
+      .order h4 {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 0px 5px;
+      }
+
+      .order p {
+        font-size: 18px;
+        font-weight: 400;
+        padding: 0px 5px;
+      }
+
+      .update {
+        padding: 10px;
+        border: 1px solid #1D1213;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .update h4 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .update p {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 8px 5px;
+      }
+
+      .contact {
+        border: 1px solid #1D1213;
+        width: 100%;
+      }
+
+      .contact h6 {
+        padding: 7px;
+        font-size: 20px;
+        font-weight: 500;
+        border-bottom: 1px solid #1D1213;
+
+      }
+
+      .contact p {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 5px;
+      }
+
+      .contact h5 {
+        font-size: 20px;
+        font-weight: 500;
+        border-top: 1px solid #1D1213;
+        padding: 7px;
+      }
+
+      .your-order span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .your-order {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+
+      #order-a {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      #order-a img {
+        width: 80px;
+      }
+
+      #order-a h2 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      #order-a h3 {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      #order-a span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .price {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .price p {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .sub-total {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      .sub-total p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+
+      }
+
+      .complete-order {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .total {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #1D1213;
+        padding-top: 10px;
+
+      }
+
+      .total p {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      #buttons {
+        padding: 20px;
+        text-align: center;
+
+      }
+
+      .btn2 {
+        background-color: white;
+        border-radius: 20px;
+        padding: 15px 25px;
+        border: 2px solid #F06D82;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+
+    @media (min-width:769px) and (max-width:998px) {
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+
+      #nav_bar ul li a:hover {
+        color: #F06D82;
+      }
+
+    }
+
+    @media (min-width:769px) and (max-width:1279px) {
+
+      #header {
+        height: 20vh;
+      }
+
+
+      .checkout {
+        padding: 30px 50px;
+      }
+
+      .checkout p {
+        font-size: 30px;
+        font-weight: 600;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+      .complete-order {
+        padding: 15px 50px;
+      }
+
+      .order {
+        display: flex;
+        align-items: center;
+        padding: 20px 0px;
+      }
+
+      .order img {
+        width: 6%;
+      }
+
+      .order h4 {
+        font-size: 24px;
+        font-weight: 600;
+        padding: 0px 5px;
+      }
+
+      .order p {
+        font-size: 20px;
+        font-weight: 400;
+        padding: 0px 5px;
+      }
+
+      .update {
+        padding: 5px;
+        border: 1px solid #1D1213;
+        margin-bottom: 20px;
+        width: 350px;
+      }
+
+      .update h4 {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .update p {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 8px 5px;
+      }
+
+      .contact {
+        border: 1px solid #1D1213;
+        width: 380px;
+      }
+
+      .contact h6 {
+        padding: 7px;
+        font-size: 20px;
+        font-weight: 400;
+        border-bottom: 1px solid #1D1213;
+
+      }
+
+      .contact p {
+        font-size: 20px;
+        font-weight: 400;
+        padding: 7px;
+      }
+
+      .contact h5 {
+        font-size: 20px;
+        font-weight: 400;
+        border-top: 1px solid #1D1213;
+        padding: 7px;
+      }
+
+      .your-order span {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .your-order {
+        text-align: center;
+      }
+
+      #order-a {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      #order-a img {
+        width: 70px;
+      }
+
+      #order-a h2 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      #order-a h3 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      #order-a span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .price {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .price p {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .sub-total {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .sub-total p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+
+      }
+
+      .complete-order {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .total {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #1D1213;
+        padding-top: 10px;
+
+
+      }
+
+      .total p {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      #buttons {
+        padding: 20px;
+        text-align: center;
+
+      }
+
+      .btn2 {
+        background-color: white;
+        border-radius: 20px;
+        padding: 12px 20px;
+        border: 2px solid #F06D82;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ----------HERO SECTION -->
+  <header id="header">
+
+    <nav id="nav_bar" class="navbar navbar-expand-lg">
+      <div>
+        <img src="images/logo-black.png" alt="">
+        <img src="images/Frame 36013.png" width="37px">
+      </div>
+      <div>
+        <button class="navbar-toggler" style="background-color: #F06D82;" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon menu-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Bookstores</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Help</a></li>
+            <li class="nav-item"><a href="" class="nav-link"><img src="images/love-black.png"></a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <img src="images/material-symbols_shopping-cart-black.png">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <img src="images/mdi_account-blak.png">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ----------------CHECKOUT DETAILS -->
+
+  <div class="section1">
+    <div class="checkout">
+      <p><span>Shopping Cart <i class="fa-solid fa-chevron-right fa-xs" style="color: #9A949466;"></i>
+          Checkout Details <i class="fa-solid fa-chevron-right fa-xs" style="color: #9A949466;"></i></span>
+        Order Complete</p>
+    </div>
+  </div>
+
+  <!-- COMPLETE ORDER -->
+
+  <div class="complete-order">
+
+    <div class="order-1">
+
+      <div class="order">
+        <img src="images/ic_baseline-check-circle-outline.png">
+        <div>
+          <p>Order #326577</p>
+          <h4>Thank you Ada!</h4>
+        </div>
+      </div>
+
+      <div class="update">
+        <h4>Order Update</h4>
+        <p>You will receive Order And Shipping Details Via Email</p>
+      </div>
+
+
+      <div class="contact">
+        <h6>Contact</h6>
+        <div>
+          <p>Phone Number: 0811234567890</p>
+          <p>Address: No 7 Briggs street Ogbomosho, Oyo State</p>
+          <p>Email: adawilliams7@gmail.com</p>
+        </div>
+        <h5>Payment: Debit Card</h5>
+      </div>
+    </div>
+
+    <div class="order-2">
+
+      <div class="your-order"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+          <path fill="#F3687f"
+            d="M6 22q-.825 0-1.412-.587T4 20V8q0-.825.588-1.412T6 6h2q0-1.65 1.175-2.825T12 2t2.825 1.175T16 6h2q.825 0 1.413.588T20 8v12q0 .825-.587 1.413T18 22zm0-2h12V8h-2v2q0 .425-.288.713T15 11t-.712-.288T14 10V8h-4v2q0 .425-.288.713T9 11t-.712-.288T8 10V8H6zm4-14h4q0-.825-.587-1.412T12 4t-1.412.588T10 6M6 20V8z" />
+        </svg> <span>Your Order</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 16 16">
+          <path fill="#F3687f"
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.646 6.24c0-.691.493-1.306 1.336-1.306c.756 0 1.313.492 1.313 1.236c0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22l.096-.107c.688-.763 1.287-1.428 1.287-2.43c0-1.266-1.031-2.215-2.613-2.215c-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z" />
+        </svg></div>
+
+
+      <div id="order-a">
+        <div>
+          <img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png">
+        </div>
+        <div>
+          <h2>Real Americans <span>(Hardcover)</span></h2>
+          <h3>By Rachel Khong</h3>
+
+          <div class="price">
+            <div>
+              <p>X1</p>
+            </div>
+            <div>
+              <p> NGN10,183</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="order-a">
+        <div>
+          <img src="images/63f33e9cf2c7c17761164099a361727f2d6c141a.jpg" width="120px">
+        </div>
+        <div>
+          <h2>Atomic Habits <span>(Paperback)</span></h2>
+          <h3>By James Clear</h3>
+
+          <div class="price">
+            <div>
+              <p>X1</p>
+            </div>
+            <div>
+              <p>NGN3,700</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-total">
+        <div>
+          <p>Subtotal</p>
+          <p>Delivery Fee</p>
+        </div>
+
+
+        <div>
+          <p>NGN13, 883</p>
+          <p>NGN8, 000</p>
+        </div>
+      </div>
+      <div class="total">
+        <div>
+          <p>Total</p>
+        </div>
+        <div>
+          <p>NGN21, 883</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="buttons">
+    <button class="btn2"><a href="">Continue Shopping</a></button>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

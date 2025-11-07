@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Bookstore Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/020a23cc78.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Raleway", sans-serif;
+    }
+
+
+    /* HERO SECTION */
+
+    #header {
+      height: 20vh;
+    }
+
+    #nav_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      z-index: 1000;
+    }
+
+    #nav_bar ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav_bar ul li {
+      list-style: none;
+    }
+
+    #nav_bar ul li a {
+      color: #1D1213;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    #nav_bar ul li a:hover {
+      color: #F06D82;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+
+
+    .btn {
+      padding: 10px;
+      margin: 20px 0px;
+      width: 300px;
+      height: 60px;
+      font-size: 26px;
+      background: #fff;
+      border: none;
+      border-radius: 20px;
+      border: 2px solid #f06d82;
+      color: #1d1213;
+      font-weight: 400;
+      box-shadow: 2px 2px 5px #333;
+    }
+
+    .btn:hover {
+      opacity: .9;
+    }
+
+    /* -SECTION1 */
+    .section1 {
+      display: flex;
+      gap: 20px;
+      padding: 0 100px 30px 90px;
+    }
+
+    .side-image img {
+      width: 450px;
+      height: 550px;
+    }
+
+    .sec1-text {
+      padding: 200px 0px;
+    }
+
+    .sec1-text h2 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .sec1-text h3 {
+      font-size: 40px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    /* SECTION2-a */
+
+    .section2-a {
+      padding: 40px 200px;
+
+    }
+
+    .section2-a h2 {
+      font-size: 36px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #1D1213;
+
+    }
+
+    .section2-a p {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 100%;
+
+    }
+
+
+    /* SECTION2-b */
+
+    .section2-b {
+      padding: 40px 310px;
+    }
+
+    .section2-b h2 {
+      font-size: 36px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #1D1213;
+
+    }
+
+    .section2-b p {
+      font-size: 25px;
+      font-weight: 600;
+
+    }
+
+    .section2-b p span {
+      font-size: 25px;
+      font-weight: 400;
+      color: #1D1213;
+    }
+
+    .section3 {
+      padding: 30px 145px;
+    }
+
+    .section3 h2 {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .section3 p {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .pay-deliver {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    #payment {
+      border: 2px solid;
+      padding: 10px;
+    }
+
+    #payment h2 {
+      font-size: 36px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    #payment p {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+    }
+
+    #Delivery h2 {
+      font-size: 36px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    #Delivery p {
+      font-size: 24px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+    }
+
+    .p-image {
+      margin: 0 10px;
+    }
+
+    #Delivery {
+      border: 2px solid;
+      padding: 10px;
+    }
+
+    /* ---------Section 4 */
+
+    .section4 {
+      padding: 30px 100px;
+    }
+
+    .section4 h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .section4 h2 span a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      color: #3771C8;
+    }
+
+    .reviews {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .stars span {
+      font-size: 30px;
+      font-weight: 400;
+      color: #1D1213;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 1);
+      padding: 20px 20px 70px 15px;
+      width: 550px;
+      border: 2px solid #f3687f;
+      border-radius: 20px;
+    }
+
+    .infos {
+      margin-top: 1rem;
+    }
+
+
+    .description {
+      margin-top: 0.4rem;
+      line-height: 1.625;
+      color: #1D1213;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .author {
+      margin-top: 1.3rem;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25rem;
+      color: #1D1213;
+    }
+
+    #button {
+      display: flex;
+      padding: 30px 20px;
+      justify-content: space-between;
+
+    }
+
+    .btn1 {
+      background-color: #F06D82;
+      border-radius: 15px;
+      padding: 20px 50px;
+      border: none;
+
+
+    }
+
+    .btn1 a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+
+    .btn2 {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px 50px;
+      border: 2px solid #F06D82;
+
+
+    }
+
+    .btn2 a {
+      text-decoration: none;
+      color: #1D1213;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    /* AVAILABLE BOOKS */
+    #section5 {
+      padding: 50px 60px;
+    }
+
+    #section5 span a {
+      text-decoration: none;
+      color: #3771C8;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+
+    .books {
+      display: flex;
+      gap: 10px;
+      overflow-x: scroll;
+    }
+
+    .books::-webkit-scrollbar {
+      display: none;
+    }
+
+    #book {
+      padding: 0px 20px;
+    }
+
+    .book-image img {
+      width: 150px;
+      height: 250px;
+      margin: 0px 30px;
+    }
+
+    #book h4 {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+      background-color: #1D1213;
+    }
+
+    .footer-text {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.5;
+      padding: 30px 260px;
+    }
+
+    .side1 h3 {
+      text-align: start;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      text-align: start;
+
+    }
+
+    .side1 ul li {
+      list-style: none;
+      justify-content: space-between;
+    }
+
+    .side1 a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .side1 img {
+      width: 45%;
+    }
+
+    .foot {
+      padding: 20px 220px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .foot p {
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+    }
+
+    .foot img {
+      width: 9%;
+    }
+
+
+    /* ---RWD */
+    @media screen and (max-width:480px) {
+
+      #header {
+        height: 20vh;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .section1 {
+        display: flex;
+        gap: 10px;
+        padding: 20px 30px 10px 20px;
+      }
+
+      .side-image img {
+        width: 70px;
+        height: 100px;
+      }
+
+      .sec1-text {
+        padding: 20px 0px;
+      }
+
+      .sec1-text h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .sec1-text h3 {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .section2-a {
+        padding: 40px 30px;
+
+      }
+
+      .section2-a h2 {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #1D1213;
+
+      }
+
+      .section2-a p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .section2-b {
+        padding: 10px 30px;
+      }
+
+      .section2-b h2 {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.5;
+        color: #1D1213;
+
+      }
+
+      .section2-b p {
+        font-size: 17px;
+        font-weight: 600;
+
+      }
+
+      .section2-b p span {
+        font-size: 15px;
+        font-weight: 400;
+        color: #1D1213;
+      }
+
+      .section3 {
+        padding: 30px 30px;
+      }
+
+      .section3 h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .section3 p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+
+      .pay-deliver {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      #payment {
+        width: 100%;
+        border: 1px solid;
+        padding: 15px;
+      }
+
+      #payment h2 {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      #payment p {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      #Delivery h2 {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      #Delivery p {
+        font-size: 15px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+
+      #Delivery {
+        border: 1px solid;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .p-image {
+        margin: 0px 0px;
+      }
+
+      .section4 {
+        padding: 30px 40px;
+      }
+
+      .section4 h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .section4 h2 span a {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        color: #3771C8;
+      }
+
+      .reviews {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .stars span {
+        font-size: 12px;
+        font-weight: 400;
+        color: #1D1213;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgba(255, 255, 255, 1);
+        padding: 20px 20px 70px 15px;
+        width: 350px;
+        border: 2px solid #f3687f;
+        border-radius: 20px;
+      }
+
+      .infos {
+        margin-top: 1rem;
+      }
+
+      .description {
+        margin-top: 0.4rem;
+        line-height: 1.625;
+        color: #1D1213;
+        font-size: 17px;
+        font-weight: 400;
+      }
+
+      .author {
+        margin-top: 1.3rem;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.25rem;
+        color: #1D1213;
+      }
+
+      #button {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 0px;
+        justify-content: space-between;
+
+      }
+
+      .btn1 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: none;
+
+
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+
+      .btn2 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: 2px solid #F06D82;
+
+
+      }
+
+      .btn2 a {
+        text-decoration: none;
+        color: #1D1213;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      #section5 {
+        padding: 30px 10px;
+      }
+
+      #section5 h2 {
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      span a {
+        font-size: 8px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .books {
+        display: flex;
+        gap: 0px;
+        overflow-x: scroll;
+      }
+
+      #book {
+        padding: 0px 10px;
+      }
+
+      .book-image img {
+        width: 100px;
+        height: 180px;
+        margin: 0px 10px;
+      }
+
+      #book h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 10px;
+        line-height: 1.5;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+    }
+
+    @media (min-width:481px) and (max-width:768px) {
+
+      #header {
+        height: 20vh;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 15px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .section1 {
+        display: flex;
+        gap: 10px;
+        padding: 20px 30px 10px 20px;
+      }
+
+      .side-image img {
+        width: 150px;
+        height: 200px;
+      }
+
+      .sec1-text {
+        padding: 40px 20px;
+      }
+
+      .sec1-text h2 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .sec1-text h3 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .section2-a {
+        padding: 40px 30px;
+
+      }
+
+      .section2-a h2 {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #1D1213;
+
+      }
+
+      .section2-a p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .section2-b {
+        padding: 10px 40px;
+      }
+
+      .section2-b h2 {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.5;
+        color: #1D1213;
+
+      }
+
+      .section2-b p {
+        font-size: 20px;
+        font-weight: 600;
+
+      }
+
+      .section2-b p span {
+        font-size: 18px;
+        font-weight: 400;
+        color: #1D1213;
+      }
+
+      .section3 {
+        padding: 30px 80px;
+      }
+
+      .section3 h2 {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .section3 p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+
+      .pay-deliver {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      #payment {
+        border: 2px solid;
+        padding: 10px;
+        width: 100%;
+      }
+
+      #payment h2 {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      #payment p {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      #Delivery h2 {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      #Delivery p {
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      .p-image {
+        margin: 0 10px;
+      }
+
+      #Delivery {
+        border: 2px solid;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .section4 {
+        padding: 30px 30px;
+      }
+
+      .section4 h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .section4 h2 span a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        color: #3771C8;
+      }
+
+      .reviews {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+      }
+
+      .stars span {
+        font-size: 15px;
+        font-weight: 400;
+        color: #1D1213;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 1);
+        padding: 20px 10px 40px 10px;
+        width: 210px;
+        border: 2px solid #f3687f;
+        border-radius: 20px;
+      }
+
+      .infos {
+        margin-top: 1rem;
+      }
+
+      .card {
+        flex: 1 1 300px;
+        max-width: 350px;
+      }
+
+      .description {
+        margin-top: 0.4rem;
+        line-height: 1.6;
+        color: #1D1213;
+        font-size: 17px;
+        font-weight: 400;
+      }
+
+      .author {
+        margin-top: 1.3rem;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.25rem;
+        color: #1D1213;
+      }
+
+      #button {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 40px
+      }
+
+      .btn1 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: none;
+
+
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+
+      .btn2 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: 2px solid #F06D82;
+
+
+      }
+
+      .btn2 a {
+        text-decoration: none;
+        color: #1D1213;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      #section5 {
+        padding: 30px 10px;
+      }
+
+      #section5 h2 {
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      span a {
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .books {
+        display: flex;
+        gap: 0px;
+        overflow-x: scroll;
+      }
+
+      #book {
+        padding: 0px 10px;
+      }
+
+      .book-image img {
+        width: 100px;
+        height: 180px;
+        margin: 0px 10px;
+      }
+
+      #book h4 {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 10px;
+        line-height: 1.5;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+
+    }
+
+
+    @media (min-width:769px) and (max-width:998px) {
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+
+      #nav_bar ul li a:hover {
+        color: #F06D82;
+      }
+
+    }
+
+
+    @media (min-width:769px) and (max-width:1279px) {
+
+      #header {
+        height: 20vh;
+      }
+
+
+      .section1 {
+        display: flex;
+        gap: 20px;
+        padding: 0 50px 30px 50px;
+      }
+
+      .side-image img {
+        width: 350px;
+        height: 500px;
+      }
+
+      .sec1-text {
+        padding: 180px 0px;
+      }
+
+      .sec1-text h2 {
+        font-size: 38px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .sec1-text h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #1D1213;
+      }
+
+      .section2-a {
+        padding: 40px 50px;
+
+      }
+
+      .section2-a h2 {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #1D1213;
+
+      }
+
+      .section2-a p {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 1.5;
+
+      }
+
+      .section2-b {
+        padding: 40px 100px;
+      }
+
+      .section2-b h2 {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #1D1213;
+
+      }
+
+      .section2-b p {
+        font-size: 24px;
+        font-weight: 600;
+
+      }
+
+      .section2-b p span {
+        font-size: 22px;
+        font-weight: 400;
+        color: #1D1213;
+      }
+
+      .section3 {
+        padding: 30px 50px;
+      }
+
+      .section3 h2 {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .section3 p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+
+      .pay-deliver {
+        display: flex;
+        gap: 15px;
+      }
+
+      #payment {
+        border: 2px solid;
+        padding: 10px;
+      }
+
+      #payment h2 {
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      #payment p {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      #Delivery h2 {
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      #Delivery p {
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      .p-image {
+        margin: 0 10px;
+      }
+
+      #Delivery {
+        border: 2px solid;
+        padding: 10px;
+      }
+
+      .section4 {
+        padding: 30px 70px;
+      }
+
+      .section4 h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 34px;
+        font-weight: 600;
+        color: #1D1213;
+      }
+
+      .section4 h2 span a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        color: #3771C8;
+      }
+
+      .reviews {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .stars span {
+        font-size: 20px;
+        font-weight: 400;
+        color: #1D1213;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 1);
+        padding: 20px 20px 10px 20px;
+        width: 280px;
+        border: 2px solid #f3687f;
+        border-radius: 20px;
+      }
+
+      .card {
+        flex: 2 2 2px;
+        max-width: 400px;
+      }
+
+      .infos {
+        margin-top: 1rem;
+      }
+
+
+      .description {
+        margin-top: 0.4rem;
+        line-height: 1.625;
+        color: #1D1213;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .author {
+        margin-top: 1.3rem;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.25rem;
+        color: #1D1213;
+      }
+
+      #button {
+        display: flex;
+        padding: 30px 20px;
+        justify-content: space-between;
+
+      }
+
+      .btn1 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 20px 50px;
+        border: none;
+
+
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+
+      .btn2 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px 50px;
+        border: 2px solid #F06D82;
+
+
+      }
+
+      .btn2 a {
+        text-decoration: none;
+        color: #1D1213;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+
+      #section5 {
+        padding: 30px 10px;
+      }
+
+      #section5 h2 {
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      span a {
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .books {
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+      }
+
+      #book {
+        padding: 0px 10px;
+      }
+
+      .book-image img {
+        width: 140px;
+        height: 200px;
+        margin: 0px 10px;
+      }
+
+      #book h4 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 100px;
+        line-height: 1.5;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ----------HERO SECTION -->
+
+  <header id="header">
+
+    <nav id="nav_bar" class="navbar navbar-expand-lg">
+      <div>
+        <img src="images/logo-black.png" alt="">
+        <img src="images/Frame 36013.png" width="37px">
+      </div>
+      <div>
+        <button class="navbar-toggler" style="background-color: #F06D82;" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon menu-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Bookstores</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Help</a></li>
+            <li class="nav-item"><a href="" class="nav-link"><img src="images/love-black.png"></a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <img src="images/material-symbols_shopping-cart-black.png">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <img src="images/mdi_account-blak.png">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- -----------SECTION-1 -->
+  <div class="section1">
+
+    <div class="side-image">
+      <img src="images/7fc064225e6bceadc6d149f771b9e9ed9c7c623c.jpg" alt="">
+    </div>
+
+    <div class="sec1-text">
+      <h2>Bookit Bookstore<h2>
+          <h3>A Community Hub For Book Lover</h3>
+    </div>
+  </div>
+
+  <!-- ----------SECTION2-a  -->
+
+  <div class="section2-a">
+    <h2>About Us</h2>
+    <p>Welcome to Bookit. A haven for book lovers with comfy reading nooks and a curated
+      selection of new and used books. Bookit was founded in 2019 and is located in
+      Ogbomosho, Oyo state. They specialize in all genres of books, and sell at reasonable
+      prices throughout Nigeria. </p>
+  </div>
+
+  <!-- ----------SECTION2-b  -->
+  <div class="section2-b">
+    <h2>Contact Information</h2>
+    <p>Bookstore Address: <span> 21 Olapade Street, opposite LAUTECH
+        main gate, Ogbomosho, Oyo State</span></p>
+    <br>
+
+    <p>Phone No: <span>081234567890, 091456789032</span></p>
+    <br>
+    <p>Email Address: <span>bookit35@gmail.com</span></p>
+    <br>
+    <p>Social Media handles: <span><img src="images/logos_facebook.png">
+        <img src="images/logos_tiktok-icon.png">
+        <img src="images/logos_whatsapp-icon.png" alt=""></span></p>
+
+  </div>
+
+  <!-- ---SECTION 3 -->
+
+  <div class="section3">
+    <h2 style="text-align: center;">Store Hours</h2>
+    <p style="text-align: center;">Mondays - Saturday : 7am - 9pm</p>
+
+    <div class="pay-deliver">
+
+
+      <div id="payment">
+        <h2>Payment Information</h2>
+        <p>Orders are processed within 1-6 business days.</p>
+
+        <P>Accepts: <img src="images/uil_atm-card.png" class="p-image"> Cards <img src="images/ph_money-light.png"
+            class="p-image"> Cash</span></P>
+        <p></p>
+
+      </div>
+
+
+      <div id="Delivery">
+        <h2>Delivery Information</h2>
+        <p>Delivery Of orders takes 6-12 business days</p>
+
+        <P>Delivery:<img src="images/mdi_truck-delivery.png" class="p-image"> Home Delivery <img
+            src="images/material-symbols_shopping-bag-outline.png" class="p-image"> Pick Up</P>
+      </div>
+    </div>
+  </div>
+  <!-- ----SECTION 4 -->
+  <div class="section4">
+    <h2>Bookit Reviews <span><a href="">(See all ratings)</a></span></h2>
+
+    <div class="reviews">
+
+      <div class="card">
+        <div class="stars">
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i> <span>April 19th, 2024</span>
+        </div>
+
+        <div class="infos">
+          <p class="description">
+            Shopping with Bookit Bookstore on BookDiverse website has been a great experience so far.</p>
+        </div>
+
+        <div class="author">
+          Michael S
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="stars">
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i> <span>March 12th, 2024</span>
+        </div>
+
+        <div class="infos">
+          <p class="description">
+            Their staff is knowledgeable
+            and their recommendations are spot on. I’ve
+            discovered new authors and genres that I love</p>
+        </div>
+
+        <div class="author">
+          Flora A
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="stars">
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i> <span>April 19th, 2024</span>
+        </div>
+
+        <div class="infos">
+          <p class="description">
+            Their collection is impressive, and the prices
+            are unbeatable!</p>
+        </div>
+
+        <div class="author">
+          Ayo O
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="stars">
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i> <span>April 19th, 2024</span>
+        </div>
+
+        <div class="infos">
+          <p class="description">
+            They have a vast selection and their shipping
+            is super fast</p>
+        </div>
+
+        <div class="author">
+          Deborah G
+        </div>
+      </div>
+    </div>
+
+    <div id="button">
+      <button class="btn1"><a href="">Rate this vendor</a></button>
+      <button class="btn2"><a href="">Flag this vendor</a></button>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- -------------------AVAILABLE BOOKS -->
+  <div id="section5">
+    <h2 style="justify-content: center; text-align: center; padding-bottom: 20px; font-size: 34px; font-weight: 500;">
+      Available books <span><a href="">View All</a></span></h2>
+
+
+    <div class="books">
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/becoming.png" alt="">
+        </div>
+        <h4>Becoming</h4>
+      </div>
+
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/norton.png" alt="">
+        </div>
+        <h4>NortonAnthology</h4>
+      </div>
+
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/effective.png" alt="">
+        </div>
+        <h4>The Psychology Of Effective Studying</h4>
+      </div>
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/kingdom.png" alt="">
+        </div>
+        <h4>Kingdom Authority</h4>
+      </div>
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/rebel.png" alt="">
+        </div>
+        <h4>Rebel Girl</h4>
+      </div>
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/hidden.png" alt="">
+        </div>
+        <h4>Hidden Figures</h4>
+      </div>
+
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/made.png" alt="">
+        </div>
+        <h4>When God Made You</h4>
+      </div>
+
+      <div id="book">
+        <div class="book-image">
+          <img src="images/nigerian.png" alt="">
+        </div>
+        <h4>Nigerian Men Will Stain Your White</h4>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- -------FOOTER -->
+
+  <div class="footer">
+    <div class="logo">
+      <img src="images/footer.png" width="100%">
+    </div>
+
+
+
+    <div class="footer-text">
+
+      <div class="side1">
+        <h3>Library</h3>
+        <ul>
+          <li><a href="">Genres</a></li>
+          <li><a href="">Languages</a></li>
+          <li><a href="">Authors</a></li>
+        </ul>
+      </div>
+
+
+      <div class="side1">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Help</a></li>
+          <li><a href="">Become A Partner</a></li>
+        </ul>
+      </div>
+
+      <div class="side1">
+        <h3 style="text-align: center;">Get the app</h3>
+        <a href=""><img src="images/googleplay.png" style="margin-right: 20px;"></a>
+        <a href=""><img src="images/applestore.png" alt=""></a>
+      </div>
+    </div>
+
+    <div style="border: 1px solid white;"></div>
+
+    <div class="foot">
+      <P>Contact Us: <img src="images/logos_facebook.png">
+        <img src="images/skill-icons_instagram.png">
+        <img src="images/prime_twitter.png">
+        <img src="images/logos_tiktok-icon.png">
+      </P>
+
+      <p>Terms and Privacy</p>
+      <p>Delivery & Returns</p>
+
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

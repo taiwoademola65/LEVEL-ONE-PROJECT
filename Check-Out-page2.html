@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Out Page 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/020a23cc78.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Raleway", sans-serif;
+    }
+
+
+    /* HERO SECTION */
+
+    #header {
+      height: 20vh;
+    }
+
+    #nav_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      z-index: 1000;
+    }
+
+    #nav_bar ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav_bar ul li {
+      list-style: none;
+    }
+
+    #nav_bar ul li a {
+      color: #1D1213;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    #nav_bar ul li a:hover {
+      color: #F06D82;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+
+    /* CHECKOUT */
+
+    .section1 {
+      padding: 20px 20px;
+    }
+
+    .checkout {
+      padding: 20px 60px;
+
+    }
+
+    .checkout p {
+      font-size: 46px;
+      font-weight: 600;
+      color: #1D1213;
+
+    }
+
+    .checkout p span {
+      font-size: 46px;
+      font-weight: 600;
+      color: #9A949466;
+
+    }
+
+    .frame {
+      text-align: center;
+      padding: 30px 0px;
+    }
+
+    /* BILLING DETAILS */
+    .Billing {
+      padding: 30px 120px;
+
+    }
+
+    .Billing h2 {
+      font-size: 36px;
+      font-weight: 600;
+      color: #1D1213;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .BD1 {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #1D1213;
+    }
+
+    .BD1 h5 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #1D1213;
+      padding: 5px 0px;
+    }
+
+    .BD2 {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #1D1213;
+    }
+
+    .BD2 p {
+      font-size: 20px;
+      font-weight: 400;
+      color: #1D1213;
+      padding: 5px 0px;
+    }
+
+    .BD3 {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #1D1213;
+    }
+
+    .BD3 p {
+      font-size: 20px;
+      font-weight: 400;
+      color: #1D1213;
+      padding: 5px 0px;
+    }
+
+    .BD4 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .BD4 h5 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #1D1213;
+      padding: 5px 0px;
+    }
+
+    /* ---CONTAINER */
+    .form-head {
+      text-align: center;
+    }
+
+    .form-head p {
+      font-size: 36px;
+      font-weight: 600;
+      color: #1D1213;
+      padding-bottom: 30px;
+    }
+
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 10px;
+      margin-top: 40px;
+
+    }
+
+    .form_area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      width: 520px;
+    }
+
+    .title {
+      color: #1D1213;
+      font-size: 40px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .sub_title {
+      font-weight: 450;
+      font-size: 15px;
+      margin: 5px 0;
+    }
+
+    .form_group {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      margin: 8px 12px;
+    }
+
+    .form_style {
+      outline: none;
+      border: 1px solid #333;
+      width: 470px;
+      height: 36px;
+      padding: 12px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 450;
+      color: #9a9494;
+    }
+
+
+    .btn {
+      padding: 12px;
+      margin: 15px 0px;
+      width: 150px;
+      font-size: 17px;
+      background: #F3687F;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-weight: 400;
+      cursor: pointer;
+      box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn:hover {
+      opacity: .9;
+    }
+
+
+
+    .link {
+      text-decoration: none;
+      font-weight: 600;
+      color: #FF0000;
+    }
+
+    .checkbox-wrapper-46 input[type="checkbox"] {
+      display: none;
+      visibility: hidden;
+    }
+
+    .checkbox-wrapper-46 .cbx {
+      margin: auto;
+      -webkit-user-select: none;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .checkbox-wrapper-46 {
+      text-align: left;
+    }
+
+    .checkbox-wrapper-46 .cbx span {
+      display: inline-block;
+      vertical-align: middle;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .checkbox-wrapper-46 .cbx span:first-child {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      transform: scale(1);
+      vertical-align: middle;
+      border: 1px solid #9098a9;
+      transition: all 0.2s ease;
+    }
+
+    .checkbox-wrapper-46 .cbx span:first-child svg {
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 16px;
+      stroke-dashoffset: 16px;
+      transition: all 0.3s ease;
+      transition-delay: 0.1s;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .checkbox-wrapper-46 .cbx span:first-child:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #F3687F;
+      display: block;
+      transform: scale(0);
+      opacity: 1;
+      border-radius: 50%;
+    }
+
+    .checkbox-wrapper-46 .cbx span:last-child {
+      padding-left: 8px;
+    }
+
+    .checkbox-wrapper-46 .cbx:hover span:first-child {
+      border-color: #F3687F;
+    }
+
+    .checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child {
+      background: #F3687F;
+      border-color: #F3687F;
+      animation: wave-46 0.4s ease;
+    }
+
+    .checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child svg {
+      stroke-dashoffset: 0;
+    }
+
+    .checkbox-wrapper-46 .inp-cbx:checked+.cbx span:first-child:before {
+      transform: scale(3.5);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    @keyframes wave-46 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    #buttons {
+      display: flex;
+      padding: 20px 140px;
+      justify-content: space-between;
+
+    }
+
+    .btn1 {
+      background-color: #F06D82;
+      border-radius: 20px;
+      padding: 12px 50px;
+      border: none;
+      font-size: 24px;
+      font-weight: 500;
+
+
+    }
+
+    .btn1 a {
+      text-decoration: none;
+      color: white;
+    }
+
+
+    .btn2 {
+      background-color: white;
+      border-radius: 20px;
+      padding: 12px 50px;
+      border: 2px solid #F06D82;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .btn2:hover {
+      background-color: #F06D82;
+      color: white;
+    }
+
+    .btn2 a:hover {
+      color: white;
+    }
+
+    .btn2 a {
+      text-decoration: none;
+      color: #1D1213;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+      background-color: #1D1213;
+    }
+
+    .footer-text {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.5;
+      padding: 30px 260px;
+    }
+
+    .side1 h3 {
+      text-align: start;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      text-align: start;
+    }
+
+    .side1 ul li {
+      list-style: none;
+      justify-content: space-between;
+    }
+
+    .side1 a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .side1 img {
+      width: 45%;
+    }
+
+    .foot {
+      padding: 20px 220px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .foot p {
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+    }
+
+    .foot img {
+      width: 9%;
+    }
+
+
+    @media screen and (max-width:480px) {
+
+      #header {
+        height: 20vh;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .checkout {
+        padding: 30px 10px;
+      }
+
+      .checkout p {
+        font-size: 15px;
+        font-weight: 650;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+      .frame img {
+        text-align: center;
+        width: 60%;
+        padding: auto;
+      }
+
+      .Billing {
+        padding: 10px 40px;
+      }
+
+      .Billing h2 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1D1213;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .BD1 h5 {
+        font-size: 11px;
+        font-weight: 600;
+        color: #1D1213;
+        padding: 10px 0px;
+      }
+
+      .BD2 {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #1D1213;
+      }
+
+      .BD2 p {
+        font-size: 11px;
+        font-weight: 400;
+        color: #1D1213;
+        padding: 5px 0px;
+      }
+
+      .BD3 {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #1D1213;
+      }
+
+      .BD3 p {
+        font-size: 11px;
+        font-weight: 400;
+        color: #1D1213;
+        padding: 5px 0px;
+      }
+
+      .BD4 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .BD4 h5 {
+        font-size: 11px;
+        font-weight: 600;
+        color: #1D1213;
+        padding: 5px 0px;
+      }
+
+      .form-head {
+        text-align: center;
+      }
+
+      .form-head p {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1D1213;
+        padding-bottom: 30px;
+      }
+
+      .form-head img {
+        width: 35%;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        margin-bottom: 35px;
+
+      }
+
+      .form_area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        height: auto;
+        width: 210px;
+      }
+
+      .title {
+        color: #1D1213;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .sub_title {
+        font-weight: 600;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+
+      .form_group {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin: 8px 12px;
+      }
+
+      .form_style {
+        outline: none;
+        border: 1px solid #333;
+        width: 100%;
+        height: 30px;
+        padding: 12px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 450;
+        color: #9a9494;
+      }
+
+      .btn {
+        padding: 12px;
+        margin: 15px 0px;
+        width: 130px;
+        font-size: 17px;
+        background: #F3687F;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        font-weight: 400;
+        cursor: pointer;
+        box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.5);
+      }
+
+      #buttons {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 20px;
+        gap: 5px;
+      }
+
+      .btn1 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 10px 15px;
+        border: none;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .btn2 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: 2px solid #F06D82;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 10px;
+        line-height: 1.5;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+
+    }
+
+
+    @media (min-width:481px) and (max-width:768px) {
+
+      #header {
+        height: 20vh;
+      }
+
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 15px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .checkout {
+        padding: 30px 10px;
+      }
+
+      .checkout p {
+        font-size: 20px;
+        font-weight: 650;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+      .frame img {
+        text-align: center;
+        width: 50%;
+        padding: auto;
+      }
+
+      .Billing {
+        padding: 10px 50px;
+      }
+
+      .Billing h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1D1213;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .BD1 h5 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #1D1213;
+        padding: 10px 0px;
+      }
+
+      .BD2 {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #1D1213;
+      }
+
+      .BD2 p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #1D1213;
+        padding: 5px 0px;
+      }
+
+      .BD3 {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #1D1213;
+      }
+
+      .BD3 p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #1D1213;
+        padding: 5px 0px;
+      }
+
+      .BD4 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .BD4 h5 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #1D1213;
+        padding: 5px 0px;
+      }
+
+      .form-head {
+        text-align: center;
+      }
+
+      .form-head p {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1D1213;
+        padding-bottom: 30px;
+      }
+
+      .form-head img {
+        width: 35%;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        margin-bottom: 35px;
+
+      }
+
+      .form_area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        height: auto;
+        width: 350px;
+      }
+
+      .title {
+        color: #1D1213;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .sub_title {
+        font-weight: 600;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+
+      .form_group {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin: 8px 12px;
+      }
+
+      .form_style {
+        outline: none;
+        border: 1px solid #333;
+        width: 100%;
+        height: 30px;
+        padding: 12px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 450;
+        color: #9a9494;
+      }
+
+      .btn {
+        padding: 12px;
+        margin: 15px 0px;
+        width: 130px;
+        font-size: 17px;
+        background: #F3687F;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        font-weight: 400;
+        cursor: pointer;
+        box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.5);
+      }
+
+      #buttons {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 70px;
+        gap: 5px;
+      }
+
+      .btn1 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 10px 15px;
+        border: none;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .btn2 {
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: 2px solid #F06D82;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+
+
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 10px;
+        line-height: 1.5;
+        width: 100%;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+
+    }
+
+    @media (min-width:769px) and (max-width:998px) {
+      .navbar-toggler {
+        display: block;
+      }
+
+      #nav_bar {
+        padding: 15px 20px;
+        background: transparent;
+      }
+
+      #navbarSupportedContent {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav_bar ul li {
+        list-style: none;
+      }
+
+      #nav_bar ul li a {
+        color: #1D1213;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+
+      #nav_bar ul li a:hover {
+        color: #F06D82;
+      }
+
+    }
+
+    @media (min-width:769px) and (max-width:1279px) {
+
+      #header {
+        height: 20vh;
+      }
+
+
+      .checkout {
+        padding: 30px 50px;
+      }
+
+      .checkout p {
+        font-size: 30px;
+        font-weight: 600;
+        color: #1D1213;
+        text-align: center;
+
+      }
+
+      .checkout p span {
+        display: none;
+      }
+
+      .checkout p i {
+        display: none;
+      }
+
+      #buttons {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 100px;
+        gap: 5px;
+      }
+
+      .btn1 {
+        background-color: #F06D82;
+        border-radius: 15px;
+        padding: 10px 15px;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .btn1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .btn2 {
+        background-color: white;
+        border-radius: 25px;
+        padding: 10px 15px;
+        border: 2px solid #F06D82;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 50px;
+        line-height: 1.5;
+        width: 100%;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ----------HERO SECTION -->
+
+  <header id="header">
+
+    <nav id="nav_bar" class="navbar navbar-expand-lg">
+      <div>
+        <img src="images/logo-black.png" alt="">
+        <img src="images/Frame 36013.png" width="37px">
+      </div>
+      <div>
+        <button class="navbar-toggler" style="background-color: #F06D82;" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon menu-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Bookstores</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Help</a></li>
+            <li class="nav-item"><a href="" class="nav-link"><img src="images/love-black.png"></a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <img src="images/material-symbols_shopping-cart-black.png">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <img src="images/mdi_account-blak.png">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ----------------CHECKOUT DETAILS -->
+
+  <div class="section1">
+    <div class="checkout">
+      <p>
+        <span>
+          Shopping Cart
+          <i class="fa-solid fa-chevron-right fa-xs" style="color: #9A949466;"></i></span>
+
+        Checkout Details
+        <i class="fa-solid fa-chevron-right fa-xs" style="color:#1D1213;"></i>
+        <span>
+          Order Complete
+        </span>
+      </p>
+    </div>
+    <div class="frame">
+      <img src="images/frame2.png">
+    </div>
+  </div>
+
+  <!-- BILLING DETAILS -->
+
+  <div class="Billing">
+    <h2>Billing Details</h2>
+    <h2>Your Order</h2>
+    <div class="BD1">
+      <div>
+        <h5>PRODUCTS</h5>
+      </div>
+      <div>
+        <h5>SUBTOTAL</h5>
+      </div>
+    </div>
+
+
+    <div class="BD2">
+      <div>
+        <p>Real Americans x1</p>
+        <p>Delivery fee</p>
+      </div>
+
+
+      <div>
+        <p>NGN10,183</p>
+        <p style="border-bottom: 1px solid;">NGN4,000</p>
+        <p>NGN14,183</p>
+      </div>
+    </div>
+
+    <div class="BD3">
+      <div>
+        <p>Atomic Habits x1</p>
+        <p>Delivery fee</p>
+      </div>
+
+
+      <div>
+        <p>NGN3,700</p>
+        <p style="border-bottom: 1px solid;">NGN4,000</p>
+        <p>NGN7,700</p>
+      </div>
+    </div>
+
+    <div class="BD4">
+      <div>
+        <h5>Total</h5>
+      </div>
+      <div>
+        <h5>NGN21,883</h5>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <!-- ------CONTAINER -->
+  <div class="form-head">
+    <p>Select Payment Method</p>
+    <img src="images/paystack.png" width="20%">
+
+  </div>
+
+  <div class="container">
+    <div class="form_area">
+      <form action="">
+        <h3 class="title"><img src="images/Group 8.png" style=" width: 7%;"> Credit Or Debit Card</h3>
+        <div class="form_group">
+          <label class="sub_title" for="name">Add A Card*</label>
+          <input placeholder="Add A Card" id="name" class="form_style" type="name" required>
+          <label class="sub_title" for="name">Name On Card</label>
+          <input placeholder="Name On Card" id="name" class="form_style" type="name" required>
+          <label class="sub_title" for="date">Expiration Date*</label>
+          <input placeholder="********" id="date" class="form_style" type="date" required>
+          <label class="sub_title" for="text">CVV*</label>
+          <input placeholder="CVV" id="name" class="form_style" type="text" required>
+        </div>
+
+
+        <div class="checkbox-wrapper-46">
+          <input type="checkbox" id="cbx-46" class="inp-cbx" />
+          <label for="cbx-46" class="cbx"><span>
+              <svg viewBox="0 0 12 10" height="10px" width="12px">
+                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+              </svg></span> I have read and agreed to the website’s<span style="color: #FF0000;"><a class="link"
+                href="">terms and conditions</a></span>
+          </label>
+        </div>
+      </form>
+      <div>
+        <button class="btn">Save</button>
+      </div>
+    </div>
+  </div>
+  <div id="buttons">
+    <button class="btn1"><a href="">Place Order</a></button>
+    <button class="btn2"><a href="">Continue Shopping</a></button>
+  </div>
+
+
+
+  <!-- -------FOOTER -->
+
+  <div class="footer">
+    <div class="logo" style="background-color: #1D1213;">
+      <img src="images/footer.png" width="100%">
+    </div>
+
+
+
+    <div class="footer-text">
+
+      <div class="side1">
+        <h3>Library</h3>
+        <ul>
+          <li><a href="">Genres</a></li>
+          <li><a href="">Languages</a></li>
+          <li><a href="">Authors</a></li>
+        </ul>
+      </div>
+
+
+      <div class="side1">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Help</a></li>
+          <li><a href="">Become A Partner</a></li>
+        </ul>
+      </div>
+
+      <div class="side1">
+        <h3 style="text-align: center;">Get the app</h3>
+        <a href=""><img src="images/googleplay.png" style="margin-right: 20px;"></a>
+        <a href=""><img src="images/applestore.png" alt=""></a>
+      </div>
+    </div>
+
+    <div style="border: 1px solid white;"></div>
+
+    <div class="foot">
+      <P>Contact Us: <img src="images/logos_facebook.png">
+        <img src="images/skill-icons_instagram.png">
+        <img src="images/prime_twitter.png">
+        <img src="images/logos_tiktok-icon.png">
+      </P>
+
+      <p>Terms and Privacy</p>
+      <p>Delivery & Returns</p>
+
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

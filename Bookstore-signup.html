@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore Signup Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 35px;
+
+    }
+
+    .form_area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      height: auto;
+      width: 450px;
+    }
+
+    .title {
+      color: #1D1213;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .sub_title {
+      font-weight: 650;
+      font-size: 12px;
+      margin: 5px 0;
+    }
+
+    .form_group {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      margin: 8px 12px;
+    }
+
+    .form_style {
+      outline: none;
+      border: 1px solid #333;
+      width: 350px;
+      height: 38px;
+      padding: 12px 10px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 450;
+      color: #9a9494;
+    }
+
+    .form_group h6 {
+      font-size: 9px;
+    }
+
+    .btn {
+      padding: 12px;
+      margin: 20px 0px;
+      width: 400px;
+      font-size: 16px;
+      background: #F3687F;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: 400;
+    }
+
+    .btn:hover {
+      opacity: .9;
+    }
+
+    .link {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1877F2;
+      padding: 5px;
+    }
+
+
+
+
+    /* FOOTER */
+
+    .footer {
+      background-color: #1D1213;
+    }
+
+    .footer-text {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.5;
+      padding: 30px 150px;
+    }
+
+    .btn3 {
+      border: 1px solid #F3687F;
+      border-radius: 10px;
+      padding: 5px 25px;
+      color: white;
+      background-color: #F3687F;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+
+    .side1 h3 {
+      text-align: start;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      text-align: start;
+    }
+
+    .side1 ul li {
+      list-style: none;
+      justify-content: space-between;
+    }
+
+    .side1 a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .side1 img {
+      width: 45%;
+    }
+
+    .foot {
+      padding: 20px 220px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .foot p {
+      font-size: 24px;
+      font-weight: 400;
+      color: white;
+    }
+
+    .foot img {
+      width: 9%;
+    }
+
+
+    /* --RWD */
+    @media screen and (max-width:480px) {
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        margin-bottom: 35px;
+
+      }
+
+      .form_area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        height: auto;
+        width: 250px;
+      }
+
+      .title {
+        color: #1D1213;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .sub_title {
+        font-weight: 600;
+        font-size: 12px;
+        margin: 5px 0;
+      }
+
+      .form_group {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin: 8px 12px;
+      }
+
+      .form_style {
+        outline: none;
+        border: 1px solid #333;
+        width: 200px;
+        height: 30px;
+        padding: 10px 10px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 450;
+        color: #9a9494;
+      }
+
+      .form_group h6 {
+        font-size: 5px;
+        font-weight: 800;
+        
+      }
+
+
+      .btn {
+        padding: 12px;
+        margin: 20px 0px;
+        width: 200px;
+        font-size: 16px;
+        background: #F3687F;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: 400;
+      }
+
+      .btn:hover {
+        opacity: .9;
+      }
+
+      .link {
+        text-decoration: none;
+        font-weight: 600;
+        color: #1877F2;
+        padding: 5px;
+        font-size: 14px;
+      }
+
+      .form_area p {
+        font-size: 12px;
+        font-weight: 600;
+
+      }
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 10px;
+        width: 100%;
+      }
+
+      .side1:nth-child(1) {
+        order: 2;
+        justify-content: center;
+        margin: 20px;
+      }
+
+      .side1 {
+        order: 1;
+      }
+
+      .btn3 {
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 5px 15px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.007);
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      .btn4 {
+        border: 1px solid #F06D82;
+        border-radius: 10px;
+        padding: 5px 10px;
+        color: white;
+        background-color: #F06D82;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .side1 h3 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 25%;
+      }
+
+      .foot {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+    }
+
+    @media (min-width:481px) and (max-width:768px) {
+
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 10px;
+        line-height: 1.5;
+        width: 100%;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+    }
+
+
+    @media (min-width:769px) and (max-width:1279px) {
+      .footer-text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 30px 50px;
+        line-height: 1.5;
+        width: 100%;
+      }
+
+      .side1 h4 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .side1 ul li a {
+        list-style: none;
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .side1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .side1 img {
+        width: 30%;
+      }
+
+      .foot {
+        padding: 20px 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .foot p {
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .foot img {
+        width: 9%;
+      }
+    }
+  </style>
+
+
+
+</head>
+
+<body style="border: 1px solid red;"> 
+
+
+  <div class="container">
+    <div class="form_area">
+      <img src="images/signup.png" width="60px" style="margin-top: 50px;">
+      <p class="title">Join Our Community of Booksellers!</p>
+      <form action="">
+        <div class="form_group">
+          <label class="sub_title" for="name">Bookstore Name</label>
+          <input placeholder="Bookstore Name" class="form_style" type="text">
+        </div>
+        <div class="form_group">
+          <label class="sub_title" for="name">Store Owner Full Name</label>
+          <input placeholder="Store Owner Full Name" class="form_style" type="text">
+        </div>
+        <div class="form_group">
+          <label class="sub_title" for="name">Email</label>
+          <input placeholder="Email" class="form_style" type="email">
+        </div>
+        <div class="form_group">
+          <label class="sub_title" for="password">Password</label>
+          <input placeholder="password" id="password" class="form_style" type="password">
+          <h6>Password must be at least 8 characters with Uppercase, lowercase and numbers </h6>
+        </div>
+
+        <div class="form_group">
+          <label class="sub_title" for="password">Confirm Password</label>
+          <input placeholder="Confirm password" id="password" class="form_style" type="password">
+        </div>
+
+        <div class="form_group">
+          <label class="sub_title" for="name">Location</label>
+          <input placeholder="Location" class="form_style" type="text">
+        </div>
+
+        <div class="form_group">
+          <label class="sub_title" for="name">Store Address</label>
+          <input placeholder="Store Address" class="form_style" type="text">
+        </div>
+
+        <div>
+          <button class="btn">Sign up</button>
+          <p>By signing up, you agree with our<a class="link" href="">terms</a></p>
+          <p>Already have an account?<a class="link" href="">Log in</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- -------FOOTER -->
+
+  <div class="footer">
+    <div class="logo">
+      <img src="images/footer.png" width="100%">
+    </div>
+    <div class="footer-text">
+      <div class="side1">
+        <a href=""><button class="btn3">login</button></a>
+      </div>
+      <div class="side1">
+        <h3>Library</h3>
+        <ul>
+          <li><a href="">Genres</a></li>
+          <li><a href="">Languages</a></li>
+          <li><a href="">Authors</a></li>
+        </ul>
+      </div>
+      <div class="side1">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Help</a></li>
+          <li><a href="">Become A Partner</a></li>
+        </ul>
+      </div>
+
+      <div class="side1">
+        <h3 style="text-align: center;">Get the app</h3>
+        <a href=""><img src="images/googleplay.png" style="margin-right: 20px;"></a>
+        <a href=""><img src="images/applestore.png" alt=""></a>
+      </div>
+    </div>
+
+    <div style="border: 1px solid white;"></div>
+
+    <div class="foot">
+      <P>Contact Us: <img src="images/logos_facebook.png">
+        <img src="images/skill-icons_instagram.png">
+        <img src="images/prime_twitter.png">
+        <img src="images/logos_tiktok-icon.png">
+      </P>
+      <p>Terms and Privacy</p>
+      <p>Delivery & Returns</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

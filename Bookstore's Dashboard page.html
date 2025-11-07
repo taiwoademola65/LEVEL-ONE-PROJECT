@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore's Store Dashboard Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/020a23cc78.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* DASHBOARD */
+    .side1 {
+      background-color: #F3687F;
+      padding: 20px 25px;
+    }
+
+    .profile {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+    }
+
+    .profile h2 {
+      font-size: 15px;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+
+    .profile p {
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFFFFF;
+    }
+
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .list ul li {
+      line-height: 3.0;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 400;
+      gap: 8px;
+
+    }
+
+    .list ul li a {
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+
+    .dashboard {
+      display: flex;
+      gap: 10px;
+    }
+
+    .side2 {
+      padding: 20px 20px;
+    }
+
+    .welcome {
+      display: flex;
+      gap: 120px;
+      margin-bottom: 20px;
+    }
+
+    .welcome h2 {
+      font-size: 32px;
+      font-weight: 400;
+      color: #1D1213;
+    }
+
+    .welcome p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #1D1213;
+    }
+
+
+    .date p {
+      border: 1px solid #1D1213;
+      padding: 10px;
+    }
+
+    .date span {
+      font-size: 15px;
+      font-weight: 400;
+      color: #1D1213;
+    }
+
+    .records {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+
+    .total-sales {
+      background-color: #FCF0E4;
+      border-radius: 10px;
+      padding: 20px 10px;
+      text-align: center;
+      width: 190px;
+      height: 130px;
+      line-height: 1.8;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .total-sales h6 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .total-sales p {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .total-orders {
+      background-color: #EDF5E8;
+      padding: 20px 10px;
+      text-align: center;
+      border-radius: 10px;
+      width: 190px;
+      height: 130px;
+      line-height: 1.8;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .total-orders h6 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .total-orders p {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .New-customers {
+      background-color: #EAF0FE;
+      border-radius: 10px;
+      padding: 20px 10px;
+      text-align: center;
+      width: 190px;
+      height: 130px;
+      line-height: 1.8;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .New-customers h6 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .New-customers p {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .products {
+      background-color: #ECF5F4;
+      border-radius: 10px;
+      padding: 20px 10px;
+      text-align: center;
+      width: 180px;
+      height: 130px;
+      line-height: 1.8;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .products h6 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .products p {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .chart {
+      display: flex;
+      padding: 20px 10px;
+      gap: 70px;
+    }
+
+    .image-chart img {
+      width: 100%;
+      border-radius: 10px;
+
+    }
+
+    .selling-product {
+      padding: 20px 20px;
+      background-color: #FFFDFD;
+      border-radius: 10px;
+      box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+      height: 300px;
+    }
+
+    .selling-product h2 {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1D1213;
+      margin-bottom: 10px;
+    }
+
+    .sales {
+      display: flex;
+      gap: 10px;
+
+    }
+
+    .sales img {
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+      width: 30px;
+
+    }
+
+    .sales h4 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .sales-item {
+      display: flex;
+      gap: 40px;
+    }
+
+    .item-no p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #1D1213;
+      background-color: #EFEFEF;
+      padding: 8px;
+    }
+
+    .recent-order {
+      padding: 10px 20px;
+      background-color: #FFFDFD;
+      border-radius: 10px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+
+    }
+
+    #order {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0px;
+
+    }
+
+    #order h4 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    #order p {
+      font-size: 15px;
+      font-weight: 400;
+      background-color: #FFFFFF;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+      padding: 10px;
+    }
+
+
+    #product {
+      display: flex;
+      justify-content: space-between;
+      background-color: #F2F8FF;
+      padding: 25px 25px;
+    }
+
+    #product h4 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    #product p {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+
+    #real-1 {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 10px;
+      background-color: #FFFFFF;
+      box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        0 4px 8px rgba(0, 0, 0, 0.08);
+      align-items: center;
+
+
+    }
+
+    #real-1 h4 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    #real-1 p {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+
+
+    .t-image-1 {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    #pending p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #E5980C;
+      border: 1px solid #E5980C;
+      border-radius: 20px;
+      padding: 10px 10px;
+    }
+
+
+    #real-2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 10px;
+      box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        0 4px 8px rgba(0, 0, 0, 0.08);
+      align-items: center;
+    }
+
+    #real-2 h4 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    #real-2 p {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .t-image-2 {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    #cancelled p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #FF0404;
+      border: 1px solid #FF0404;
+      border-radius: 20px;
+      padding: 10px 10px;
+    }
+
+    #real-3 {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 10px;
+      box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        0 4px 8px rgba(0, 0, 0, 0.08);
+      align-items: center;
+    }
+
+    #real-3 h4 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    #real-3 p {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .t-image-3 {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    #shipped p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #0377FF;
+      border: 1px solid #0377FF;
+      border-radius: 20px;
+      padding: 10px 10px;
+    }
+
+    #real-4 {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 10px;
+      box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        0 4px 8px rgba(0, 0, 0, 0.08);
+      align-items: center;
+    }
+
+    #real-4 h4 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    #real-4 p {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .t-image-4 {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    #delivered p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #1FAF38;
+      border: 1px solid #1FAF38;
+      border-radius: 20px;
+      padding: 10px 10px;
+    }
+
+    .top-customer {
+      background-color: #FFFDFD;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+      width: 380px;
+      padding: 10px 20px;
+    }
+
+    .top-customer h2 {
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: #FFFDFD;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+      font-size: 20px;
+      font-weight: 600;
+      color: #1D1213;
+      text-align: center;
+    }
+
+    .john-dee {
+      display: flex;
+      gap: 10px;
+    }
+
+    .john-dee h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1D1213;
+    }
+
+    .john-dee p {
+      font-size: 13px;
+      font-weight: 500;
+      color: #1D1213;
+    }
+
+    .john-dee img {
+      width: 60px;
+      border-radius: 100%;
+    }
+
+    .john-view {
+      display: flex;
+      gap: 50px;
+      padding: 10px 20px;
+    }
+
+    .view p {
+      font-size: 15px;
+      font-weight: 400;
+      color: #01003C;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+      padding: 10px 20px;
+    }
+
+    /* Base reset for small adjustments */
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- Tablets: 769px – 1279px ---------- */
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  .dashboard {
+    flex-direction: row;
+  }
+
+  .side1 {
+    width: 230px;
+    padding: 15px;
+  }
+
+  .side2 {
+    width: calc(100% - 230px);
+    padding: 20px;
+  }
+
+  .records {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .records > div {
+    width: 48%;
+    height: auto;
+  }
+
+  .chart {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-chart img {
+    width: 100%;
+  }
+
+  .selling-product {
+    width: 100%;
+    height: auto;
+  }
+
+  .welcome {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .top-customer {
+    width: 100%;
+  }
+}
+
+/* ---------- Small Screens: max-width 768px ---------- */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .side1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .side1 .list {
+    display: none; 
+  }
+
+  /* Add a menu button for mobile toggle */
+  .side1::after {
+    content: "☰";
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .profile img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .side2 {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .welcome {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .records {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .records > div {
+    width: 90%;
+    height: auto;
+  }
+
+  .chart {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .selling-product {
+    width: 100%;
+    height: auto;
+  }
+
+  .recent-order,
+  .top-customer {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  #product,
+  #real-1,
+  #real-2,
+  #real-3,
+  #real-4 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .t-image-1,
+  .t-image-2,
+  .t-image-3,
+  .t-image-4 {
+    flex-direction: row;
+  }
+
+  #order {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .top-customer {
+    width: 100%;
+  }
+
+  .john-view {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .view p {
+    width: fit-content;
+  }
+}
+
+/* ---------- Very Small Screens: max-width 480px ---------- */
+@media screen and (max-width: 480px) {
+  .welcome h2 {
+    font-size: 22px;
+  }
+
+  .welcome p {
+    font-size: 14px;
+  }
+
+  .records > div {
+    width: 100%;
+  }
+
+  .top-customer h2 {
+    font-size: 18px;
+  }
+}
+
+    
+  </style>
+
+</head>
+
+<body>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard">
+
+    <div class="side1">
+
+      <div class="profile">
+        <img src="images/image1.png">
+        <div>
+          <h2>Bookit Bookstore</h2>
+          <p>bookitbookstore@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="list">
+        <ul>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M8.557 2.75H4.682A1.93 1.93 0 0 0 2.75 4.682v3.875a1.94 1.94 0 0 0 1.932 1.942h3.875a1.94 1.94 0 0 0 1.942-1.942V4.682A1.94 1.94 0 0 0 8.557 2.75m10.761 0h-3.875a1.94 1.94 0 0 0-1.942 1.932v3.875a1.943 1.943 0 0 0 1.942 1.942h3.875a1.94 1.94 0 0 0 1.932-1.942V4.682a1.93 1.93 0 0 0-1.932-1.932m0 10.75h-3.875a1.94 1.94 0 0 0-1.942 1.933v3.875a1.94 1.94 0 0 0 1.942 1.942h3.875a1.94 1.94 0 0 0 1.932-1.942v-3.875a1.93 1.93 0 0 0-1.932-1.932M8.557 13.5H4.682a1.943 1.943 0 0 0-1.932 1.943v3.875a1.93 1.93 0 0 0 1.932 1.932h3.875a1.94 1.94 0 0 0 1.942-1.932v-3.875a1.94 1.94 0 0 0-1.942-1.942" />
+            </svg><a href="">Dashboard</a></li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+              <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                d="M256 256v128m64-64H192M80 176a16 16 0 0 0-16 16v216c0 30.24 25.76 56 56 56h272c30.24 0 56-24.51 56-54.75V192a16 16 0 0 0-16-16Zm80 0v-32a96 96 0 0 1 96-96h0a96 96 0 0 1 96 96v32" />
+            </svg><a href="">Add Products</a></li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="29" viewBox="0 0 14 14">
+              <path fill="#fff" fill-rule="evenodd"
+                d="M7 1.75a1.625 1.625 0 0 1 1.625 1.625V4h-3.25v-.625A1.625 1.625 0 0 1 7 1.75m0 3.5h4.48L12.74 12q.01.057.01.116c0 .35-.284.634-.634.634H1.884A.634.634 0 0 1 1.26 12l1.258-6.75zM7 14h5.116a1.884 1.884 0 0 0 1.852-2.229l-1.354-7.26A.625.625 0 0 0 12 4h-1.625v-.625a3.375 3.375 0 0 0-6.75 0V4H2a.625.625 0 0 0-.614.51L.032 11.771A1.883 1.883 0 0 0 1.884 14z"
+                clip-rule="evenodd" />
+            </svg><a href="">Products</a></li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path
+                  d="M21.25 7.506v6.607a3.963 3.963 0 0 1-3.964 3.965h-2.643l-2.18 2.18a.636.636 0 0 1-.925 0l-2.18-2.18H6.713a3.964 3.964 0 0 1-3.964-3.965V7.506a3.964 3.964 0 0 1 3.964-3.964h10.572a3.964 3.964 0 0 1 3.964 3.964" />
+                <path
+                  d="M12 11.338a.66.66 0 1 0 0-1.321a.66.66 0 0 0 0 1.321m4.625 0a.66.66 0 1 0 0-1.321a.66.66 0 0 0 0 1.321m-9.25 0a.66.66 0 1 0 0-1.321a.66.66 0 0 0 0 1.321" />
+              </g>
+            </svg><a href="">Messages</a></li>
+          <li><i class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i><a href="">Customers</a></li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path fill="#FFFFFF"
+                d="M19.9 12.66a1 1 0 0 1 0-1.32l1.28-1.44a1 1 0 0 0 .12-1.17l-2-3.46a1 1 0 0 0-1.07-.48l-1.88.38a1 1 0 0 1-1.15-.66l-.61-1.83a1 1 0 0 0-.95-.68h-4a1 1 0 0 0-1 .68l-.56 1.83a1 1 0 0 1-1.15.66L5 4.79a1 1 0 0 0-1 .48L2 8.73a1 1 0 0 0 .1 1.17l1.27 1.44a1 1 0 0 1 0 1.32L2.1 14.1a1 1 0 0 0-.1 1.17l2 3.46a1 1 0 0 0 1.07.48l1.88-.38a1 1 0 0 1 1.15.66l.61 1.83a1 1 0 0 0 1 .68h4a1 1 0 0 0 .95-.68l.61-1.83a1 1 0 0 1 1.15-.66l1.88.38a1 1 0 0 0 1.07-.48l2-3.46a1 1 0 0 0-.12-1.17ZM18.41 14l.8.9l-1.28 2.22l-1.18-.24a3 3 0 0 0-3.45 2L12.92 20h-2.56L10 18.86a3 3 0 0 0-3.45-2l-1.18.24l-1.3-2.21l.8-.9a3 3 0 0 0 0-4l-.8-.9l1.28-2.2l1.18.24a3 3 0 0 0 3.45-2L10.36 4h2.56l.38 1.14a3 3 0 0 0 3.45 2l1.18-.24l1.28 2.22l-.8.9a3 3 0 0 0 0 3.98m-6.77-6a4 4 0 1 0 4 4a4 4 0 0 0-4-4m0 6a2 2 0 1 1 2-2a2 2 0 0 1-2 2" />
+            </svg><a href="">Setting</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WELCOME BACK -->
+    <div class="side2">
+      <div><img src="images/search-icon.png" style="margin-bottom: 10px;"></div>
+
+      <div class="welcome">
+        <div>
+          <h2>Welcome Back Bookit Bookstore.</h2>
+          <p>Here's what is happening in your store </p>
+        </div>
+
+        <div class="date">
+          <p><i class="fa-regular fa-calendar-days fa-sm" style="color: #F3687F;"></i><span>July 21st to 27th</span></p>
+        </div>
+      </div>
+
+
+      <div class="records">
+
+        <div class="total-sales">
+          <h6>Total Sales</h6>
+          <p><i class="fa-solid fa-file-lines fa-sm" style="color: #1d1213d2;"></i> <span>#78,509</span></p>
+        </div>
+
+
+        <div class="total-orders">
+          <h6>Total Orders</h6>
+          <p><i class="fa-solid fa-file-lines fa-sm" style="color: #1d1213d2;"></i> <span>5209</span></p>
+        </div>
+
+
+        <div class="New-customers">
+          <h6>New Customers</h6>
+          <p><i class="fa-solid fa-user fa-sm" style="color: #1d1213d2;"></i> <span>509</span></p>
+        </div>
+
+        <div class="products">
+          <h6>Products </h6>
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill="none" stroke="#1d1213d2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+                <path
+                  d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2m0 9h.01M9 17h.01M12 16l1 1l3-3" />
+              </g>
+            </svg> <span>8,509</span></p>
+        </div>
+      </div>
+
+      <!-- CHART -->
+
+      <div class="chart">
+        <div class="image-chart"><img src="images/chart.png.png" alt=""></div>
+
+
+        <div class="selling-product">
+          <h2>Most Selling Products</h2>
+
+          <div class="sales-item">
+
+            <div class="sales">
+              <div><img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png"></div>
+
+              <div>
+                <h4>Real Americans</h4>
+                <p style="font-size: 12px; font-weight: 500;">ID:23189</p>
+              </div>
+            </div>
+
+            <div class="item-no">
+              <p>128 Sales</p>
+            </div>
+
+          </div>
+          <div class="sales-item">
+
+            <div class="sales">
+              <div><img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png"></div>
+
+              <div>
+                <h4>Real Americans</h4>
+                <p style="font-size: 12px; font-weight: 500;">ID:23189</p>
+              </div>
+            </div>
+
+            <div class="item-no">
+              <p>401 Sales</p>
+            </div>
+          </div>
+
+          <div class="sales-item">
+
+            <div class="sales">
+              <div><img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png"></div>
+
+              <div>
+                <h4>Real Americans</h4>
+                <p style="font-size: 12px; font-weight: 500;">ID:23189</p>
+              </div>
+            </div>
+
+            <div class="item-no">
+              <p>1K Sales</p>
+            </div>
+          </div>
+
+          <div class="sales-item">
+
+            <div class="sales">
+              <div><img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png"></div>
+
+              <div>
+                <h4>Real Americans</h4>
+                <p style="font-size: 12px; font-weight: 500;">ID:23189</p>
+              </div>
+            </div>
+
+            <div class="item-no">
+              <p>3K Sales</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="recent-order">
+
+        <div id="order">
+          <h4>Recent Orders</h4>
+          <p>View all</p>
+        </div>
+
+        <div id="product">
+          <h4>#</h4>
+          <p>product</p>
+          <p>Customer</p>
+          <p>Order Id</p>
+          <p>Date</p>
+          <p>Status</p>
+        </div>
+
+        <div id="real-1">
+          <h4>1</h4>
+          <div class="t-image-1">
+            <img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png" width="25px">
+            <p>product</p>
+          </div>
+
+          <p>John Doe</p>
+          <p>ID:23189</p>
+          <p>24th July 2024</p>
+          <div id="pending">
+            <p>Pending </p>
+          </div>
+        </div>
+
+        <div id="real-2">
+          <h4>1</h4>
+          <div class="t-image-2">
+            <img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png" width="25px">
+            <p>product</p>
+          </div>
+
+          <p>John Doe</p>
+          <p>ID:23189</p>
+          <p>24th July 2024</p>
+          <div id="cancelled">
+            <p>Cancelled</p>
+          </div>
+        </div>
+
+        <div id="real-3">
+          <h4>1</h4>
+          <div class="t-image-3">
+            <img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png" width="25px">
+            <p>product</p>
+          </div>
+
+          <p>John Doe</p>
+          <p>ID:23189</p>
+          <p>24th July 2024</p>
+          <div id="shipped">
+            <p>Shipped</p>
+          </div>
+        </div>
+
+
+        <div id="real-4">
+          <h4>1</h4>
+          <div class="t-image-4">
+            <img src="images/0c36a8eb4a5e987ab6c30374d0f45dea4fa9876e.png" width="25px">
+            <p>product</p>
+          </div>
+
+          <p>John Doe</p>
+          <p>ID:23189</p>
+          <p>24th July 2024</p>
+          <div id="delivered">
+            <p>Delivered</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEEKLY TOP CUSTOMERS -->
+      <div class="top-customer">
+        <h2>Weekly Top Customers </h2>
+
+        <div class="john-view">
+          <div class="john-dee">
+            <img src="images/john-dee.png">
+            <div>
+              <h3>John Doe</h3>
+              <p>7 Orders</p>
+            </div>
+          </div>
+
+          <div class="view">
+            <p>View</p>
+          </div>
+        </div>
+
+
+        <div class="john-view">
+          <div class="john-dee">
+            <img src="images/Sarah-allen.png">
+            <div>
+              <h3>John Doe</h3>
+              <p>7 Orders</p>
+            </div>
+          </div>
+
+          <div class="view">
+            <p>View</p>
+          </div>
+        </div>
+
+        <div class="john-view">
+          <div class="john-dee">
+            <img src="images/micheal-king.png">
+            <div>
+              <h3>John Doe</h3>
+              <p>5 Orders</p>
+            </div>
+          </div>
+
+          <div class="view">
+            <p>View</p>
+          </div>
+        </div>
+
+        <div class="john-view">
+          <div class="john-dee">
+            <img src="images/layla-day.png">
+            <div>
+              <h3>John Doe</h3>
+              <p>3 Orders</p>
+            </div>
+          </div>
+
+          <div class="view">
+            <p>View</p>
+          </div>
+        </div>
+      </div>
+
+</body>
+
+</html>
