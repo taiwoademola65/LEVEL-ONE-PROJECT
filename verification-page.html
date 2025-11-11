@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verification Page</title>
+  <link rel="shortcut icon" href="images/signup.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
@@ -83,6 +84,11 @@
       color: white;
       font-weight: 400;
       cursor: pointer;
+    }
+
+    .btn a {
+      text-decoration: none;
+      color: white;
     }
 
     .btn:hover {
@@ -503,9 +509,6 @@
       }
     }
   </style>
-
-
-
 </head>
 
 <body>
@@ -524,10 +527,11 @@
         <input id="input5" type="text" maxlength="1">
         <input id="input6" type="text" maxlength="1">
       </div>
-      <p style="padding: 15px;">Didn't recieve a code? <span><a href="">Resend</a></span></p>
+      <p style="padding: 15px;">Didn't recieve a code? <span><a href="./verification-page.html">Resend</a></span></p>
       <div>
-        <button class="btn">Submit</button>
-        <p>Don't have an account?<a class="link" href=""><span style="color: #1877F2;">Sign up</span></a></p>
+        <button class="btn"><a href="./new-password.html">Submit</a></button>
+        <p>Don't have an account?<a class="link" href="./buyer-signup.html"><span style="color: #1877F2;">Sign
+              up</span></a></p>
       </div>
     </div>
   </div>
@@ -540,8 +544,8 @@
     </div>
     <div class="footer-text">
       <div class="side1">
-        <a href=""><button class="btn3">login</button></a>
-        <a href=""><button class="btn4">Signup</button></a>
+        <a href="./buyer-login.html"><button class="btn3">login</button></a>
+        <a href="./buyer-signup.html"><button class="btn4">Signup</button></a>
       </div>
       <div class="side1">
         <h3>Library</h3>

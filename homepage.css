@@ -7,21 +7,15 @@
 
 
 /* HERO SECTION */
+
 #bg-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/landingpage.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/a3f0f5d1a57be47a72acf51e6f1eaf1386171a07.png);
   background-size: cover;
   background-position: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  height: 80vh;
   z-index: -1000;
 }
-
-
-
-#nav_bar {
+#nav_bar { 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,14 +38,7 @@
 
 #nav_bar ul li {
   list-style: none;
-
 }
-
-
-li img {
-  filter: invert();
-}
-
 
 #nav_bar ul li a {
   color: white;
@@ -69,85 +56,36 @@ li img {
   display: none;
 }
 
-#btn1 {
-  border: 1px solid #F06D82;
-  border-radius: 10px;
-  padding: 5px 25px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.007);
-  font-size: 20px;
-
-
-}
-
-#btn2 {
-  border: 1px solid #F06D82;
-  border-radius: 10px;
-  padding: 5px 25px;
-  color: white;
-  background-color: #F06D82;
-  font-size: 20px;
-}
-
-#content {
-  margin-top: 120px;
-}
-
 #content h1 {
   text-align: center;
-  font-size: 54px;
+  padding-top: 200px;
+  font-size: 50px;
   font-weight: 600px;
   color: #ffffff;
-}
-
-#content h2 {
-  font-size: 54px;
-  font-weight: 600px;
-  color: #ffffff;
-  margin-left: 80px;
-
 }
 
 .menu-bar {
   display: none;
 }
 
-span {
-  color: #F06D82;
-  font-size: 58px;
-  font-weight: 600;
+li img {
+  filter: invert();
+
 }
 
-.btn-a {
-  border: 1px solid #F06D82;
-  border-radius: 24px;
-  padding: 5px 50px;
-  color: white;
-  background-color: #F06D82;
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.button-container {
-  text-align: center;
-  gap: 20px;
-}
-
-.btn-b {
-  border: 1px solid #F06D82;
-  border-radius: 24px;
-  padding: 5px 25px;
-  color: white;
-  background-color: #F06D82;
-  font-size: 20px;
-}
 
 /* BROWSE GENRE */
 
 #section1 {
-  padding: 20px 100px;
-  margin-top: 600px;
+  padding: 50px 100px;
+}
 
+#section1 h2 {
+  font-size: 36px;
+  font-weight: 600;
+  justify-content: center;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .card {
@@ -175,9 +113,19 @@ h5 {
 }
 
 
+
 /* NEW RELEASE */
 #section2 {
   padding: 50px 100px;
+
+}
+
+#section2 h2 {
+  font-size: 36px;
+  font-weight: 600;
+  justify-content: center;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 
@@ -218,7 +166,14 @@ span a {
 
 #section3 {
   padding: 50px 100px;
+}
 
+#section3 h2 {
+  font-size: 36px;
+  font-weight: 600;
+  justify-content: center;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 
@@ -256,11 +211,13 @@ span a {
   justify-content: space-between;
   align-items: center;
   padding: 40px 50px;
+
 }
 
 .text {
   width: 200%;
   color: white;
+
 }
 
 .text h6 {
@@ -278,9 +235,18 @@ span a {
   padding: 50px 140px;
 }
 
+#section5 h2 {
+  font-size: 36px;
+  font-weight: 600;
+  justify-content: center;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
 .bookstores {
   display: flex;
   gap: 20px;
+
 }
 
 .store-image img {
@@ -321,58 +287,46 @@ h6 {
 
 .footer-text {
   display: flex;
+  text-align: center;
   justify-content: space-between;
   line-height: 1.5;
-  padding: 30px 150px;
+  padding: 30px 260px;
 }
 
-.btn3 {
-  border: 1px solid white;
-  border-radius: 10px;
-  padding: 5px 25px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.007);
-  font-size: 20px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.btn4 {
-  border: 1px solid #F06D82;
-  border-radius: 10px;
-  padding: 5px 25px;
-  color: white;
-  background-color: #F06D82;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.side1 h3 {
-  text-align: start;
+.side1 h4 {
+  margin-left: 20px;
+  align-items: center;
   font-size: 20px;
   font-weight: 600;
-  color: white;
-  text-align: start;
+  color: #ffffff;
 }
 
 .side1 ul li {
   list-style: none;
-  justify-content: space-between;
 }
 
-.side1 a {
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+.side1 li a {
   text-decoration: none;
   color: white;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .side1 img {
-  width: 45%;
+  width: 30%;
 }
 
 .foot {
   padding: 20px 220px;
   display: flex;
   justify-content: space-between;
+
 }
 
 .foot p {
@@ -385,13 +339,10 @@ h6 {
   width: 9%;
 }
 
-
-/* RWD */
-
 @media screen and (max-width:480px) {
 
   #bg-image {
-    height: 100vh;
+    height: 70vh;
   }
 
   .navbar-toggler {
@@ -405,7 +356,6 @@ h6 {
 
   #navbarSupportedContent {
     position: absolute;
-    background: rgb(53, 51, 51);
     top: 60px;
     right: 10px;
     width: 50%;
@@ -435,60 +385,17 @@ h6 {
     font-weight: 500;
   }
 
-  #content {
-    margin-top: 10px;
-  }
-
   #content h1 {
     text-align: center;
-    font-size: 14px;
+    padding-top: 100px;
+    font-size: 20px;
     font-weight: 600px;
     color: #ffffff;
   }
-
-  #content h2 {
-    font-size: 12px;
-    font-weight: 600px;
-    color: #ffffff;
-    margin-left: 10px;
-    text-align: center;
-
-  }
-
-   span {
-    color: #F06D82;
-    font-size: 28px;
-    font-weight: 600;
-  }
-
-  .btn-a {
-    border: 1px solid #F06D82;
-    border-radius: 24px;
-    padding: 5px 40px;
-    color: white;
-    background-color: #F06D82;
-    font-size: 14px;
-    margin: 10px;
-  }
-
-  .button-container {
-    text-align: center;
-    padding: 10px;
-  }
-
-  .btn-b {
-    border: 1px solid #F06D82;
-    border-radius: 24px;
-    padding: 5px 10px;
-    color: white;
-    background-color: #F06D82;
-    font-size: 14px;
-  }
-
 
   #section1 {
-    padding: 30px 10px;
-    margin-top: 500px;
+    padding: 10px 10px;
+
   }
 
   #section1 h2 {
@@ -670,42 +577,11 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    align-items: center;
-    padding: 30px 5px;
+    padding: 30px 10px;
+    line-height: 1.5;
   }
 
-  .side1:nth-child(1) {
-    order: 2;
-    justify-content: center;
-    margin: 20px;
-  }
-
-  .side1 {
-    order: 1;
-  }
-
-  .btn3 {
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 5px 15px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.007);
-    font-size: 16px;
-    cursor: pointer;
-    margin: 5px;
-  }
-
-  .btn4 {
-    border: 1px solid #F06D82;
-    border-radius: 10px;
-    padding: 5px 10px;
-    color: white;
-    background-color: #F06D82;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .side1 h3 {
+  .side1 h4 {
     text-align: center;
     font-size: 15px;
     font-weight: 600;
@@ -730,7 +606,7 @@ h6 {
   }
 
   .side1 img {
-    width: 25%;
+    width: 30%;
   }
 
   .foot {
@@ -802,55 +678,14 @@ h6 {
 
   #content h1 {
     text-align: center;
-    padding-top: 20px;
-    font-size: 18px;
+    padding-top: 200px;
+    font-size: 32px;
     font-weight: 600px;
     color: #ffffff;
   }
-
-  #content h2 {
-    font-size: 16px;
-    font-weight: 600px;
-    color: #ffffff;
-    margin-left: 10px;
-    text-align: center;
-
-  }
-
-  span {
-    color: #F06D82;
-    font-size: 28px;
-    font-weight: 600;
-  }
-
-  .btn-a {
-    border: 1px solid #F06D82;
-    border-radius: 24px;
-    padding: 5px 40px;
-    color: white;
-    background-color: #F06D82;
-    font-size: 15px;
-    margin: 10px;
-  }
-
-  .button-container {
-    text-align: center;
-    padding: 30px;
-  }
-
-  .btn-b {
-    border: 1px solid #F06D82;
-    border-radius: 24px;
-    padding: 5px 10px;
-    color: white;
-    background-color: #F06D82;
-    font-size: 15px;
-  }
-
-
 
   #section1 {
-    padding: 10px 20px;
+    padding: 30px 10px;
   }
 
   #section1 h2 {
@@ -1083,6 +918,7 @@ h6 {
   }
 }
 
+
 @media (min-width:769px) and (max-width:997px) {
   .navbar-toggler {
     display: block;
@@ -1128,9 +964,8 @@ h6 {
   #nav_bar ul li a:hover {
     color: #F06D82;
   }
-}
 
-#content h1 {
+  #content h1 {
   text-align: center;
   padding-top: 100px;
   font-size: 36px;
@@ -1144,8 +979,10 @@ h6 {
   color: #ffffff;
   margin-left: 10px;
   text-align: center;
-
 }
+}
+
+/*--Large screen */
 
 @media (min-width:769px) and (max-width:1279px) {
 
@@ -1154,39 +991,8 @@ h6 {
   }
 
 
-
-  span {
-    color: #F06D82;
-    font-size: 36px;
-    font-weight: 600;
-  }
-
-  .btn-a {
-    border: 1px solid #F06D82;
-    border-radius: 24px;
-    padding: 5px 50px;
-    color: white;
-    background-color: #F06D82;
-    font-size: 15px;
-    margin: 10px;
-  }
-
-  .button-container {
-    text-align: center;
-    padding: 30px;
-  }
-
-  .btn-b {
-    border: 1px solid #F06D82;
-    border-radius: 24px;
-    padding: 5px 25px;
-    color: white;
-    background-color: #F06D82;
-    font-size: 15px;
-  }
-
   #section1 {
-    padding: 30px 10px;
+    padding: 10px 10px;
   }
 
   #section1 h2 {
@@ -1330,7 +1136,6 @@ h6 {
     flex-wrap: wrap;
     align-items: center;
     gap: 30px;
-
   }
 
   .store-image img {
